@@ -1,5 +1,5 @@
 const cheerio = require("cheerio");
-const { puppetGetWebContent } = require("./puppetCrawler");
+const { puppetGetWebContent } = require("./puppet");
 
 async function yahooNewsCrawler() {
   const content = await puppetGetWebContent("https://tw.yahoo.com/");

@@ -1,5 +1,5 @@
 const cheerio = require('cheerio');
-const { puppetGetWebContent } = require('./puppetCrawler');
+const { puppetGetWebContent } = require('./puppet');
 
 const searchTypeMap = {
   1: '綜合排行',
@@ -61,7 +61,7 @@ async function momoCrawler(productName = 'iphone13') {
   });
 }
 
-momoCrawler('跑車');
+// momoCrawler('跑車');
 
 module.exports = {
   momoCrawler,
