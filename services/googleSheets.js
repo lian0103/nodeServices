@@ -1,6 +1,8 @@
+require("dotenv").config();
+
 const { google } = require("googleapis");
 
-const spreadsheetId = "1iqioigF8mhnWOxp-75E0yYAA0iFhzgWqQ167tzVGqjs";
+const spreadsheetId = process.env.SAMPLE_SHEET_ID;
 
 async function initGoogle() {
   const auth = new google.auth.GoogleAuth({
