@@ -1,7 +1,11 @@
 require("dotenv").config();
+// 到google develop console 先下載服務憑證
+// https://console.cloud.google.com/apis/credentials?project=node-crawler-359702
 
 const { google } = require("googleapis");
 
+// spreadsheetId 於google sheet url中可取得
+// https://docs.google.com/spreadsheets/d/"""1iqioigF8mhnWOxp-75E0yYAA0iFhzgWqQ167tzVGqjs"""/edit#gid=1845754049
 const spreadsheetId = process.env.SAMPLE_SHEET_ID;
 
 async function initGoogle() {

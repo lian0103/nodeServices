@@ -22,7 +22,7 @@ async function main() {
     promiseArr.push(
       new Promise((resolv, reject) => {
         shortUrl.short(item.href, (err, url) => {
-          // console.log('url', url);
+          console.log('url', url);
           resolv(url);
         });
       })
@@ -30,7 +30,7 @@ async function main() {
   });
 
   Promise.all(promiseArr).then((resAll) => {
-    // console.log('resAll', resAll);
+    console.log('resAll', resAll);
     lineNotify(`排程作業執行完畢！ ${dayjs().format(
       'YYYY-MM-DD hh:mm'
     )}\n${result
@@ -39,7 +39,9 @@ async function main() {
         return `${item.title} ${resAll[idx]}`;
       })
       .join('\n')}
-    `);
+    `).catch((err) => {
+      lineNotify('notify error', err);
+    });
   });
 }
 
