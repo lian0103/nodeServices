@@ -61,7 +61,7 @@ async function momoCrawler(productName = 'iphone13') {
   });
 }
 
-// momoCrawler('跑車');
+momoCrawler('iphone13');
 
 module.exports = {
   momoCrawler,

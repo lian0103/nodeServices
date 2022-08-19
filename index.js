@@ -2,7 +2,6 @@ const { yahooNewsCrawler } = require('./services/yahooCrawler');
 const { appendSheet, batchUpdateSheet } = require('./services/googleSheets');
 const { lineNotify } = require('./services/lineNotify');
 const dayjs = require('dayjs');
-const shortUrl = require('node-url-shortener');
 
 async function main() {
   console.log('----crawler start----');
@@ -12,36 +11,19 @@ async function main() {
   );
 
   console.log('----appendSheet start----');
-  let sheetName = dayjs().format('YYYY-MM-DD hh mm'); //不能有dash符號
+  let sheetName = dayjs().format('YYYY-MM-DD hh mm'); //表單名稱不能有特殊符號
   await batchUpdateSheet(sheetName);
   await appendSheet(rows, sheetName);
 
   console.log('----notify start----');
-  let promiseArr = [];
-  result.slice(1, 4).forEach((item) => {
-    promiseArr.push(
-      new Promise((resolv, reject) => {
-        shortUrl.short(item.href, (err, url) => {
-          console.log('url', url);
-          resolv(url);
-        });
-      })
-    );
-  });
-
-  Promise.all(promiseArr).then((resAll) => {
-    console.log('resAll', resAll);
-    lineNotify(`排程作業執行完畢！ ${dayjs().format(
-      'YYYY-MM-DD hh:mm'
-    )}\n${result
-      .slice(1, 4)
-      .map((item, idx) => {
-        return `${item.title} ${resAll[idx]}`;
-      })
-      .join('\n')}
-    `).catch((err) => {
-      lineNotify('notify error', err);
-    });
+  lineNotify(`排程作業執行完畢！ ${dayjs().format('YYYY-MM-DD hh:mm')}\n${result
+    .slice(1, 4)
+    .map((item, idx) => {
+      return `${item.title} ${item.href}`;
+    })
+    .join('\n')}
+  `).catch((err) => {
+    lineNotify('notify error', err);
   });
 }
 
