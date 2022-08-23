@@ -24,9 +24,12 @@ async function momoCrawler(productName = 'iphone13') {
     arr.push({
       name: eles.eq(i).find('.prdName').text(),
       url: urlDomain + eles.eq(i).attr('href'),
-      img: eles.eq(i).find('img').attr('src'),
+      img: eles.eq(i).find('img')?.attr('src') || '',
     });
   }
+  arr = arr.filter((item) => item.name != '' && item.img != '');
+
+  // console.log(arr);
 
   let promiseArr = [];
 
@@ -54,14 +57,14 @@ async function momoCrawler(productName = 'iphone13') {
     );
   });
 
-  Promise.all(promiseArr).then((resAll) => {
-    const endTime = new Date().getTime();
-    console.log(`共花費時間:${Math.floor((endTime - startTime) / 1000)}秒`);
-    console.log(arr);
-  });
+  await Promise.all(promiseArr);
+  const endTime = new Date().getTime();
+  console.log(`共花費時間:${Math.floor((endTime - startTime) / 1000)}秒`);
+  // console.log(arr);
+  return arr;
 }
 
-momoCrawler('iphone13');
+// momoCrawler('林襄');
 
 module.exports = {
   momoCrawler,

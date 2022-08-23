@@ -8,12 +8,15 @@ const {
 } = require('./services/googleSheets');
 const { lineNotify } = require('./services/lineNotify');
 const { startCron } = require('./services/cron');
+const { momoCrawler } = require('./services/momoCrawler');
 const dayjs = require('dayjs');
 
 const express = require('express');
+const e = require('express');
 const app = express();
 
 var isCronBeenCall = false;
+var isCrawlering = false;
 
 async function main() {
   console.log('----crawler start----');
@@ -47,6 +50,17 @@ app.get('/startCron', async (req, res) => {
     isCronBeenCall = true;
   }
   res.send(`startCron~~~~ ${isCronBeenCall}`);
+});
+
+app.get('/momo', async (req, res) => {
+  if (!isCrawlering) {
+    isCrawlering = true;
+    console.log('req.query.pName',req.query.pName)
+    let result = await momoCrawler(req.query.pName);
+    console.log(result)
+    isCrawlering = false;
+    res.json(result);
+  }
 });
 
 app.listen(3030, () => {
