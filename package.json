@@ -1,7 +1,8 @@
 {
   "name": "node-crawler",
   "scripts": {
-    "start": "pm2 start index.js"
+    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "dev": "pm2 start index.js"
   },
   "dependencies": {
     "axios": "^0.27.2",
