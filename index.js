@@ -10,10 +10,6 @@ const { lineNotify } = require('./services/lineNotify');
 const { startCron } = require('./services/cron');
 const dayjs = require('dayjs');
 
-const express = require('express');
-const app = express();
-
-var isCronBeenCall = false;
 
 async function main() {
   console.log('----crawler start----');
@@ -41,15 +37,5 @@ async function main() {
   });
 }
 
-app.get('/startCron', async (req, res) => {
-  if (!isCronBeenCall) {
-    startCron(main);
-    isCronBeenCall = true;
-  }
+startCron(main);
 
-  res.send(`startCron~~~~ ${isCronBeenCall}`);
-});
-
-app.listen(3030, () => {
-  console.log('app is listening at 3030');
-});
