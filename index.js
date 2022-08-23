@@ -1,5 +1,11 @@
 const { yahooNewsCrawler } = require('./services/yahooCrawler');
-const { appendSheet, batchUpdateSheet } = require('./services/googleSheets');
+const {
+  initGoogle,
+  appendSheet,
+  addSheet,
+  getSheetsInfo,
+  updateSheetProperties,
+} = require('./services/googleSheets');
 const { lineNotify } = require('./services/lineNotify');
 const dayjs = require('dayjs');
 
@@ -11,15 +17,17 @@ async function main() {
   );
 
   console.log('----appendSheet start----');
-  let sheetName = dayjs().format('YYYY-MM-DD hh mm'); //表單名稱不能有特殊符號
-  await batchUpdateSheet(sheetName);
+  await initGoogle();
+  let sheetName = dayjs().format('YYYYMMDDhhmm'); //表單名稱不能有特殊符號
+  await addSheet(sheetName);
   await appendSheet(rows, sheetName);
+  let sheetInfo = await getSheetsInfo();
+  await updateSheetProperties(sheetInfo[sheetInfo.length - 1]);
 
   console.log('----notify start----');
   lineNotify(`排程作業執行完畢！ ${dayjs().format('YYYY-MM-DD hh:mm')}\n${result
-    .slice(1, 4)
     .map((item, idx) => {
-      return `${item.title} ${item.href}`;
+      return `${item.title}`;
     })
     .join('\n')}
   `).catch((err) => {

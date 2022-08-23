@@ -1,48 +1,45 @@
-require("dotenv").config();
+require('dotenv').config();
 // 到google develop console 先下載服務憑證
 // https://console.cloud.google.com/apis/credentials?project=node-crawler-359702
 
-const { google } = require("googleapis");
+const { google } = require('googleapis');
 
 // spreadsheetId 於google sheet url中可取得
-// https://docs.google.com/spreadsheets/d/"""1iqioigF8mhnWOxp-75E0yYAA0iFhzgWqQ167tzVGqjs"""/edit#gid=1845754049
+// https://docs.google.com/spreadsheets/d/1iqioigF8mhnWOxp-75E0yYAA0iFhzgWqQ167tzVGqjs/edit#gid=1845754049
 const spreadsheetId = process.env.SAMPLE_SHEET_ID;
 
+var auth = null;
+var googleSheets = {};
+
 async function initGoogle() {
-  const auth = new google.auth.GoogleAuth({
-    keyFile: "credentials.json",
-    scopes: "https://www.googleapis.com/auth/spreadsheets",
+  auth = new google.auth.GoogleAuth({
+    keyFile: 'credentials.json',
+    scopes: 'https://www.googleapis.com/auth/spreadsheets',
   });
 
   const client = await auth.getClient();
-  const googleSheets = google.sheets({ version: "v4", auth: client });
-
-  return { auth, googleSheets };
+  googleSheets = google.sheets({ version: 'v4', auth: client });
 }
 
-async function appendSheet(rowsData = [[], []], sheetName = "sheet1") {
-  let { auth, googleSheets } = await initGoogle();
-
+async function appendSheet(rowsData = [[], []], sheetName = 'sheet1') {
   try {
     await googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId,
       range: `${sheetName}!A:C`,
-      valueInputOption: "USER_ENTERED",
+      valueInputOption: 'USER_ENTERED',
       resource: {
         values: rowsData,
       },
     });
   } catch (error) {
-    console.log("appendSheet error", error);
+    console.log('appendSheet error', error);
   }
 }
 
-async function batchUpdateSheet(sheetName) {
-  let { auth, googleSheets } = await initGoogle();
-
+async function addSheet(sheetName) {
   try {
-    const res = await googleSheets.spreadsheets.batchUpdate({
+    await googleSheets.spreadsheets.batchUpdate({
       spreadsheetId,
       auth,
       resource: {
@@ -57,12 +54,94 @@ async function batchUpdateSheet(sheetName) {
         ],
       },
     });
-    console.log(res.data.spreadsheetId + "add sheet finished");
   } catch (error) {}
+}
+
+async function getSheetsInfo() {
+  try {
+    const res = await googleSheets.spreadsheets.get({
+      auth,
+      spreadsheetId,
+      includeGridData: false,
+    });
+    return res.data.sheets;
+  } catch (error) {
+    console.log('err in getSheetsInfo');
+  }
+}
+
+async function updateSheetProperties(sheetObj) {
+  let sheetId = sheetObj.properties.sheetId;
+  try {
+    const res = await googleSheets.spreadsheets.batchUpdate({
+      spreadsheetId,
+      auth,
+      resource: {
+        requests: [
+          {
+            updateDimensionProperties: {
+              range: {
+                sheetId: sheetId,
+                dimension: 'COLUMNS',
+                startIndex: 1,
+                endIndex: 2,
+              },
+              properties: {
+                pixelSize: 600,
+              },
+              fields: 'pixelSize',
+            },
+          },
+          {
+            updateDimensionProperties: {
+              range: {
+                sheetId: sheetId,
+                dimension: 'COLUMNS',
+                startIndex: 2,
+                endIndex: 3,
+              },
+              properties: {
+                pixelSize: 250,
+              },
+              fields: 'pixelSize',
+            },
+          },
+          {
+            updateCells: {
+              range: {
+                sheetId: sheetId,
+                startColumnIndex: 2,
+                endColumnIndex: 3,
+                startRowIndex: 0,
+                endRowIndex: 1000,
+              },
+              rows: [
+                ...Array(50).fill({
+                  values: [
+                    {
+                      userEnteredFormat: {
+                        wrapStrategy: 'CLIP',
+                      },
+                    },
+                  ],
+                }),
+              ],
+              fields: 'userEnteredFormat.wrapStrategy',
+            },
+          },
+        ],
+      },
+    });
+    // console.log(res);
+  } catch (error) {
+    console.log('err in updateSheetProperties', error);
+  }
 }
 
 module.exports = {
   initGoogle,
   appendSheet,
-  batchUpdateSheet,
+  addSheet,
+  getSheetsInfo,
+  updateSheetProperties,
 };
