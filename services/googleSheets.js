@@ -26,7 +26,7 @@ async function appendSheet(rowsData = [[], []], sheetName = 'sheet1') {
     await googleSheets.spreadsheets.values.append({
       auth,
       spreadsheetId,
-      range: `${sheetName}!A:C`,
+      range: `${sheetName}!A:F`,
       valueInputOption: 'USER_ENTERED',
       resource: {
         values: rowsData,
@@ -101,7 +101,21 @@ async function updateSheetProperties(sheetObj) {
                 endIndex: 3,
               },
               properties: {
-                pixelSize: 250,
+                pixelSize: 100,
+              },
+              fields: 'pixelSize',
+            },
+          },
+          {
+            updateDimensionProperties: {
+              range: {
+                sheetId: sheetId,
+                dimension: 'COLUMNS',
+                startIndex: 3,
+                endIndex: 4,
+              },
+              properties: {
+                pixelSize: 100,
               },
               fields: 'pixelSize',
             },
@@ -110,9 +124,30 @@ async function updateSheetProperties(sheetObj) {
             updateCells: {
               range: {
                 sheetId: sheetId,
-                startColumnIndex: 2,
-                endColumnIndex: 3,
-                startRowIndex: 0,
+                startColumnIndex: 4,
+                endColumnIndex: 5,
+                startRowIndex: 2,
+                endRowIndex: 1000,
+              },
+              rows: [
+                ...Array(50).fill({
+                  values: [
+                    {
+                      userEnteredFormat: {
+                        wrapStrategy: 'CLIP',
+                      },
+                    },
+                  ],
+                }),
+              ],
+              fields: 'userEnteredFormat.wrapStrategy',
+            },
+            updateCells: {
+              range: {
+                sheetId: sheetId,
+                startColumnIndex: 5,
+                endColumnIndex: 6,
+                startRowIndex: 1,
                 endRowIndex: 1000,
               },
               rows: [

@@ -6,13 +6,13 @@ const searchTypeMap = {
   6: '銷量排行',
 };
 
-async function momoCrawler(productName = 'iphone13') {
+async function momoCrawler(keyword = 'apple iphone13', crawlerNum = 5) {
   const startTime = new Date().getTime();
 
   const urlDomain = 'https://www.momoshop.com.tw';
-  const searchType = '1';
+  const searchType = '6';
   const content = await puppetGetWebContent(
-    `${urlDomain}/search/searchShop.jsp?keyword=${productName}&searchType=${searchType}`
+    `${urlDomain}/search/searchShop.jsp?keyword=${keyword}&searchType=${searchType}`
   );
   const $ = cheerio.load(content);
   const eles = $(`a[class="goodsUrl"]`);
@@ -20,7 +20,7 @@ async function momoCrawler(productName = 'iphone13') {
   let arr = [];
 
   // 應該為 eles.length
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < crawlerNum; i++) {
     arr.push({
       name: eles.eq(i).find('.prdName').text(),
       url: urlDomain + eles.eq(i).attr('href'),
@@ -57,14 +57,21 @@ async function momoCrawler(productName = 'iphone13') {
     );
   });
 
-  await Promise.all(promiseArr);
-  const endTime = new Date().getTime();
-  console.log(`共花費時間:${Math.floor((endTime - startTime) / 1000)}秒`);
   // console.log(arr);
-  return arr;
+  return new Promise((resolv, reject) => {
+    Promise.all(promiseArr)
+      .then(() => {
+        const endTime = new Date().getTime();
+        console.log(
+          `${keyword} 共花費時間:${Math.floor((endTime - startTime) / 1000)}秒`
+        );
+        resolv(arr);
+      })
+      .catch((err) => {
+        console.log('momoCrawler error', error);
+      });
+  });
 }
-
-// momoCrawler('林襄');
 
 module.exports = {
   momoCrawler,

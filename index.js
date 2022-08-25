@@ -11,14 +11,9 @@ const { startCron } = require('./services/cron');
 const { momoCrawler } = require('./services/momoCrawler');
 const dayjs = require('dayjs');
 
-const express = require('express');
-const e = require('express');
-const app = express();
+require('events').EventEmitter.defaultMaxListeners = 100;
 
-var isCronBeenCall = false;
-var isCrawlering = false;
-
-async function main() {
+async function yahooNewsCrawlerImplement() {
   console.log('----crawler start----');
   const result = await yahooNewsCrawler();
   const rows = result.map((item) =>
@@ -27,7 +22,7 @@ async function main() {
 
   console.log('----appendSheet start----');
   await initGoogle();
-  let sheetName = dayjs().format('YYYYMMDDhhmm'); //表單名稱不能有特殊符號
+  let sheetName = dayjs().format('YYYYMMDDhhmm');
   await addSheet(sheetName);
   await appendSheet(rows, sheetName);
   let sheetInfo = await getSheetsInfo();
@@ -44,25 +39,49 @@ async function main() {
   });
 }
 
-app.get('/startCron', async (req, res) => {
-  if (!isCronBeenCall) {
-    startCron(main);
-    isCronBeenCall = true;
-  }
-  res.send(`startCron~~~~ ${isCronBeenCall}`);
-});
+async function momoCrawlerImplement(targetArr) {
+  console.log('----appendSheet start----');
+  let rowsTitle = [
+    ['搜尋字', '名稱-momo', '價錢-momo', '標籤-momo', '網址-momo', '縮圖-momo'],
+  ];
 
-app.get('/momo', async (req, res) => {
-  if (!isCrawlering) {
-    isCrawlering = true;
-    console.log('req.query.pName',req.query.pName)
-    let result = await momoCrawler(req.query.pName);
-    console.log(result)
-    isCrawlering = false;
-    res.json(result);
-  }
-});
+  await initGoogle();
+  let sheetName = dayjs().format('YYYYMMDDhhmm') + '-MOMO';
+  await addSheet(sheetName);
+  await appendSheet(rowsTitle, sheetName);
 
-app.listen(3030, () => {
-  console.log('app is listening at 3030');
-});
+  for(let idx in targetArr){
+    let item = targetArr[idx];
+    let keyword = `${item.brand} ${item.productName}`;
+    console.log('----crawler start----', keyword);
+    let res = await momoCrawler(keyword);
+    let rows = [];
+    res.forEach((rItem, rIdx) => {
+      rows.push(
+        Object.values({
+          搜尋字: rIdx == 0 ? `${item.brand} ${item.productName}` : '',
+          名稱: rItem?.name,
+          價錢: rItem?.price,
+          標籤: rItem?.tags.join(';'),
+          縮圖: rItem?.img,
+          網址: rItem?.url,
+        })
+      );
+    });
+    console.log('----appendSheet start----');
+    await appendSheet(rows, sheetName);
+  }
+
+
+  let sheetInfo = await getSheetsInfo();
+  await updateSheetProperties(sheetInfo[sheetInfo.length - 1]);
+}
+
+const targetArr = [
+  { brand: 'apple', productName: 'megsafe' },
+  { brand: '', productName: '美國牛' },
+  { brand: '郭元益', productName: '鳳梨酥' },
+];
+
+momoCrawlerImplement(targetArr);
+
