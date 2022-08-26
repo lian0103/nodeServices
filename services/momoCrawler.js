@@ -18,8 +18,6 @@ async function momoCrawler(keyword = 'apple iphone13', crawlerNum = 5) {
   const eles = $(`a[class="goodsUrl"]`);
 
   let arr = [];
-
-  // 應該為 eles.length
   for (let i = 0; i < crawlerNum; i++) {
     arr.push({
       name: eles.eq(i).find('.prdName').text(),

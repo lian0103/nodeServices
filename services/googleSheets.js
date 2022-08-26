@@ -121,6 +121,20 @@ async function updateSheetProperties(sheetObj) {
             },
           },
           {
+            updateDimensionProperties: {
+              range: {
+                sheetId: sheetId,
+                dimension: 'COLUMNS',
+                startIndex: 4,
+                endIndex: 5,
+              },
+              properties: {
+                pixelSize: 200,
+              },
+              fields: 'pixelSize',
+            },
+          },
+          {
             updateCells: {
               range: {
                 sheetId: sheetId,
