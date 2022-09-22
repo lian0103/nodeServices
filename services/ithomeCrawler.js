@@ -1,13 +1,39 @@
 const cheerio = require('cheerio');
 const { puppetGetWebContentWithUserArgs } = require('./puppet');
 const fs = require('fs-extra');
+const dayjs = require('dayjs');
+const isBetween = require('dayjs/plugin/isBetween');
 const { resolve } = require('path');
+
+dayjs.extend(isBetween);
 
 const pureString = (str) => {
   return str.replaceAll('\n', '').replaceAll('  系列', '').trim();
 };
 
-async function writeFiles(dataArr = []) {
+function sortDataByDate() {
+  const file = fs.readFileSync(
+    resolve(__dirname, '../ithome2022/articles.json'),
+    'utf-8'
+  );
+  let fileObject = JSON.parse(file);
+  Object.keys(fileObject).forEach((key) => {
+    fileObject[key] = fileObject[key].sort((pre, next) => {
+      return (
+        new Date(pre.updateTime).getTime() - new Date(next.updateTime).getTime()
+      );
+    });
+  });
+  fs.outputFile(
+    resolve(__dirname, '../ithome2022/articles.json'),
+    JSON.stringify(fileObject),
+    (err) => {
+      if (err) console.log(err);
+    }
+  );
+}
+
+async function writeFiles(dataArr = null) {
   const file = fs.readFileSync(
     resolve(__dirname, '../ithome2022/articles.json'),
     'utf-8'
@@ -37,7 +63,7 @@ async function writeFiles(dataArr = []) {
   );
 }
 
-async function crawler() {
+async function crawler(dateRange = null) {
   const startTime = new Date().getTime();
 
   const url = 'https://ithelp.ithome.com.tw/2022ironman/web';
@@ -52,8 +78,11 @@ async function crawler() {
   }
 
   let pageTotal = arr[arr.length - 1];
+  let dateRangeBreak = false;
+  let crawlerPageCount = 0;
 
   for (let i = 0; i < pageTotal; i++) {
+    if (dateRangeBreak) break;
     const pageStartTime = new Date().getTime();
 
     let perPageContent = await puppetGetWebContentWithUserArgs(
@@ -74,12 +103,25 @@ async function crawler() {
         updateTime: pureString(pageEles.eq(j).find('.date').text()),
       };
       dataArr.push(data);
+
+      if (
+        Array.isArray(dateRange) &&
+        !dayjs(data.updateTime).isBetween(
+          dateRange[0],
+          dateRange[1],
+          'day',
+          '['
+        )
+      ) {
+        dateRangeBreak = true;
+      }
     }
 
     console.log(dataArr);
 
     await writeFiles(dataArr);
 
+    crawlerPageCount = i + 1;
     const pageEndTime = new Date().getTime();
     console.log(
       `page${i + 1}花費時間:${Math.floor(
@@ -90,10 +132,12 @@ async function crawler() {
 
   const endTime = new Date().getTime();
   console.log(
-    `${pageTotal} pages 共花費時間:${Math.floor(
+    `${crawlerPageCount} pages 共花費時間:${Math.floor(
       (endTime - startTime) / 1000
     )}秒`
   );
+
+  sortDataByDate();
 }
 
-crawler();
+crawler(['2022-09-22', '2022-09-22']);
