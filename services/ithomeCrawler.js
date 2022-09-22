@@ -63,7 +63,7 @@ async function writeFiles(dataArr = null) {
   );
 }
 
-async function crawler(dateRange = null) {
+async function itHomeCrawler(dateRange = null) {
   const startTime = new Date().getTime();
 
   const url = 'https://ithelp.ithome.com.tw/2022ironman/web';
@@ -140,4 +140,8 @@ async function crawler(dateRange = null) {
   sortDataByDate();
 }
 
-crawler(['2022-09-22', '2022-09-22']);
+// itHomeCrawler(['2022-09-22', '2022-09-22']);
+
+module.exports = {
+  itHomeCrawler,
+};

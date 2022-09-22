@@ -1,87 +1,60 @@
-const { yahooNewsCrawler } = require('./services/yahooCrawler');
-const {
-  initGoogle,
-  appendSheet,
-  addSheet,
-  getSheetsInfo,
-  updateSheetProperties,
-} = require('./services/googleSheets');
-const { lineNotify } = require('./services/lineNotify');
-const { startCron } = require('./services/cron');
-const { momoCrawler } = require('./services/momoCrawler');
 const dayjs = require('dayjs');
+const { startCron } = require('./services/cron');
+const { lineNotify } = require('./services/lineNotify');
+const { itHomeCrawler } = require('./services/ithomeCrawler');
+const fs = require('fs-extra');
+const { resolve } = require('path');
 
-require('events').EventEmitter.defaultMaxListeners = 100;
-
-async function yahooNewsCrawlerImplement() {
-  console.log('----crawler start----');
-  const result = await yahooNewsCrawler();
-  const rows = result.map((item) =>
-    Object.values({ 0: item.time, 1: item.title, 2: item.href })
+async function notifyNewArticles(
+  date,
+  titleKeywords = ['vue', 'javascript', '前端']
+) {
+  const file = fs.readFileSync(
+    resolve(__dirname, './ithome2022/articles.json'),
+    'utf-8'
   );
+  let fileObject = JSON.parse(file);
+  let notifyData = [`鐵人賽今日更新${titleKeywords.join()}文章:`];
 
-  console.log('----appendSheet start----');
-  await initGoogle();
-  let sheetName = dayjs().format('YYYYMMDDhhmm');
-  await addSheet(sheetName);
-  await appendSheet(rows, sheetName);
-  let sheetInfo = await getSheetsInfo();
-  await updateSheetProperties(sheetInfo[sheetInfo.length - 1]);
-
-  console.log('----notify start----');
-  lineNotify(`排程作業執行完畢！ ${dayjs().format('YYYY-MM-DD hh:mm')}\n${result
-    .map((item, idx) => {
-      return `${item.title}`;
-    })
-    .join('\n')}
-  `).catch((err) => {
-    lineNotify('notify error', err);
-  });
-}
-
-async function momoCrawlerImplement(targetArr) {
-  console.log('----appendSheet start----');
-  let rowsTitle = [
-    ['搜尋字', '名稱-momo', '價錢-momo', '標籤-momo', '網址-momo', '縮圖-momo'],
-  ];
-
-  await initGoogle();
-  let sheetName = dayjs().format('YYYYMMDDhhmm') + '-MOMO';
-  await addSheet(sheetName);
-  await appendSheet(rowsTitle, sheetName);
-
-  for(let idx in targetArr){
-    let item = targetArr[idx];
-    let keyword = `${item.brand} ${item.productName}`;
-    console.log('----crawler start----', keyword);
-    let res = await momoCrawler(keyword);
-    let rows = [];
-    res.forEach((rItem, rIdx) => {
-      rows.push(
-        Object.values({
-          搜尋字: rIdx == 0 ? `${item.brand} ${item.productName}` : '',
-          名稱: rItem?.name,
-          價錢: rItem?.price,
-          標籤: rItem?.tags.join(';'),
-          縮圖: rItem?.img,
-          網址: rItem?.url,
-        })
-      );
+  Object.keys(fileObject).forEach((key) => {
+    fileObject[key].forEach((article) => {
+      if (
+        date === article.updateTime &&
+        titleKeywords.some((kWord) =>
+          article.title.toLowerCase().includes(kWord)
+        )
+      ) {
+        notifyData.push(`${article.title} ${article.href}`);
+      }
     });
-    console.log('----appendSheet start----');
-    await appendSheet(rows, sheetName);
-  }
+  });
 
-
-  let sheetInfo = await getSheetsInfo();
-  await updateSheetProperties(sheetInfo[sheetInfo.length - 1]);
+  let msg =
+    notifyData.length == 1
+      ? `${date}無${titleKeywords.join()}相關更新`
+      : notifyData.join('\n\n');
+  lineNotify(msg);
 }
 
-const targetArr = [
-  { brand: 'apple', productName: 'megsafe' },
-  { brand: '', productName: '美國牛' },
-  { brand: '郭元益', productName: '鳳梨酥' },
-];
+async function itHomeJobs(dateRange) {
+  console.log(
+    `開始執行排程作業 2022itHome ${dayjs().format('YYYY-MM-DD hh:mm')}`
+  );
+  await itHomeCrawler(dateRange);
 
-momoCrawlerImplement(targetArr);
+  await notifyNewArticles(dateRange[0]);
 
+  console.log(
+    `排程作業執行完畢 2022itHome ${dayjs().format('YYYY-MM-DD hh:mm')}`
+  );
+}
+startCron(() => {
+  itHomeJobs([
+    dayjs().format('YYYY-MM-DD'),
+    dayjs().subtract(1, 'day').format('YYYY-MM-DD'),
+  ]);
+}, '0 0 9 * * *');
+
+startCron(() => {
+  itHomeJobs([dayjs().format('YYYY-MM-DD'), dayjs().format('YYYY-MM-DD')]);
+}, '0 15 15 * * *');
