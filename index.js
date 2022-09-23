@@ -57,4 +57,7 @@ startCron(() => {
 
 startCron(() => {
   itHomeJobs([dayjs().format('YYYY-MM-DD'), dayjs().format('YYYY-MM-DD')]);
-}, '0 15 15 * * *');
+}, '0 0 12,16 * * *');
+
+
+// itHomeJobs([dayjs().format('YYYY-MM-DD'), dayjs().format('YYYY-MM-DD')]);

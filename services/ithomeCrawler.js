@@ -8,7 +8,7 @@ const { resolve } = require('path');
 dayjs.extend(isBetween);
 
 const pureString = (str) => {
-  return str.replaceAll('\n', '').replaceAll('  系列', '').trim();
+  return str.replace('/\n/g', '').replace('/  系列/g', '').trim();
 };
 
 function sortDataByDate() {
