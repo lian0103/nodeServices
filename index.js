@@ -10,9 +10,10 @@ async function notifyNewArticles(
   titleKeywords = ['vue', 'javascript', '前端']
 ) {
   const file = fs.readFileSync(
-    resolve(__dirname, './ithome2022/articles.json'),
+    resolve(__dirname, `./ithome2022/articles.json`),
     'utf-8'
   );
+
   let fileObject = JSON.parse(file);
   let notifyData = [`鐵人賽今日更新${titleKeywords.join()}文章:`];
 
@@ -59,5 +60,7 @@ startCron(() => {
   itHomeJobs([dayjs().format('YYYY-MM-DD'), dayjs().format('YYYY-MM-DD')]);
 }, '0 0 12,16 * * *');
 
-
-// itHomeJobs([dayjs().format('YYYY-MM-DD'), dayjs().format('YYYY-MM-DD')]);
+// itHomeJobs([
+//   dayjs().format('YYYY-MM-DD'),
+//   dayjs('2022-09-01').format('YYYY-MM-DD'),
+// ]);

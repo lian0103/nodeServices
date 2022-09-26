@@ -4,64 +4,13 @@ const fs = require('fs-extra');
 const dayjs = require('dayjs');
 const isBetween = require('dayjs/plugin/isBetween');
 const { resolve } = require('path');
+const {
+  pureString,
+  pureTopicString,
+  sortDataByDate,
+} = require('../utils/pureJsonFile');
 
 dayjs.extend(isBetween);
-
-const pureString = (str) => {
-  return str.replace('/\n/g', '').replace('/  系列/g', '').trim();
-};
-
-function sortDataByDate() {
-  const file = fs.readFileSync(
-    resolve(__dirname, '../ithome2022/articles.json'),
-    'utf-8'
-  );
-  let fileObject = JSON.parse(file);
-  Object.keys(fileObject).forEach((key) => {
-    fileObject[key] = fileObject[key].sort((pre, next) => {
-      return (
-        new Date(pre.updateTime).getTime() - new Date(next.updateTime).getTime()
-      );
-    });
-  });
-  fs.outputFile(
-    resolve(__dirname, '../ithome2022/articles.json'),
-    JSON.stringify(fileObject),
-    (err) => {
-      if (err) console.log(err);
-    }
-  );
-}
-
-async function writeFiles(dataArr = null) {
-  const file = fs.readFileSync(
-    resolve(__dirname, '../ithome2022/articles.json'),
-    'utf-8'
-  );
-  //   console.log(JSON.parse(file));
-  let fileObject = JSON.parse(file);
-
-  dataArr.forEach((data) => {
-    let { author } = data;
-    if (!fileObject[author]) {
-      fileObject[author] = [data];
-    } else if (Array.isArray(fileObject[author])) {
-      let set = new Set();
-      let arr = [...fileObject[author], data];
-      fileObject[author] = arr.filter((item) =>
-        !set.has(item.title) ? set.add(item.title) : false
-      );
-    }
-  });
-
-  fs.outputFile(
-    resolve(__dirname, '../ithome2022/articles.json'),
-    JSON.stringify(fileObject),
-    (err) => {
-      if (err) console.log(err);
-    }
-  );
-}
 
 async function itHomeCrawler(dateRange = null) {
   const startTime = new Date().getTime();
@@ -96,30 +45,52 @@ async function itHomeCrawler(dateRange = null) {
 
     for (j = 0; j < pageEles.length; j++) {
       let data = {
-        author: pureString(pageEles.eq(j).find('.ir-list__name').text()),
-        topic: pureString(pageEles.eq(j).find('.articles-topic').text()),
-        title: pureString(pageEles.eq(j).find('.articles-title').text()),
+        author: `${pureString(pageEles.eq(j).find('.ir-list__name').text())}`,
+        topic: `${pureTopicString(
+          pureString(pageEles.eq(j).find('.articles-topic').text())
+        )}`,
+        title: `${pureString(pageEles.eq(j).find('.articles-title').text())}`,
         href: pageEles.eq(j).find('.articles-title').find('a').attr('href'),
-        updateTime: pureString(pageEles.eq(j).find('.date').text()),
+        updateTime: `${pureString(pageEles.eq(j).find('.date').text())}`,
       };
       dataArr.push(data);
 
+
       if (
         Array.isArray(dateRange) &&
-        !dayjs(data.updateTime).isBetween(
-          dateRange[0],
-          dateRange[1],
-          'day',
-          '['
-        )
+        !dayjs(data.updateTime).isBetween(dateRange[0], dateRange[1], 'day','[')
       ) {
+        console.log('in?????????',!dayjs(data.updateTime).isBetween(dateRange[0], dateRange[1], 'day','['))
         dateRangeBreak = true;
       }
     }
 
-    console.log(dataArr);
+    console.log(dataArr)
 
-    await writeFiles(dataArr);
+    const file = fs.readFileSync(
+      resolve(__dirname, '../ithome2022/articles.json'),
+      'utf-8'
+    );
+    //   console.log(JSON.parse(file));
+    let fileObject = JSON.parse(file||'{}');
+
+    dataArr.forEach((data) => {
+      let { author } = data;
+      if (!fileObject[author]) {
+        fileObject[author] = [data];
+      } else if (Array.isArray(fileObject[author])) {
+        let set = new Set();
+        let arr = [...fileObject[author], data];
+        fileObject[author] = arr.filter((item) =>
+          !set.has(item.title) ? set.add(item.title) : false
+        );
+      }
+    });
+
+    await fs.writeJson(
+      resolve(__dirname, `../ithome2022/articles.json`),
+      fileObject
+    );
 
     crawlerPageCount = i + 1;
     const pageEndTime = new Date().getTime();
@@ -139,8 +110,6 @@ async function itHomeCrawler(dateRange = null) {
 
   sortDataByDate();
 }
-
-// itHomeCrawler(['2022-09-22', '2022-09-22']);
 
 module.exports = {
   itHomeCrawler,
