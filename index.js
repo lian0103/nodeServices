@@ -38,29 +38,42 @@ async function notifyNewArticles(
 }
 
 async function itHomeJobs(dateRange) {
-  console.log(
-    `開始執行排程作業 2022itHome ${dayjs().format('YYYY-MM-DD hh:mm')}`
-  );
+  console.log(`開始執行2022itHome ${dateRange[0]}-${dateRange[1]} 排程作業 `);
   await itHomeCrawler(dateRange);
 
   await notifyNewArticles(dateRange[0]);
 
   console.log(
-    `排程作業執行完畢 2022itHome ${dayjs().format('YYYY-MM-DD hh:mm')}`
+    `排程作業2022itHome執行完畢 ${dayjs().format('YYYY-MM-DD hh:mm')}`
   );
 }
+
+function genDateRange(target) {
+  let arr = [];
+
+  switch (target) {
+    case 'before9': {
+      arr = [
+        dayjs().format('YYYY-MM-DD'),
+        dayjs().subtract(1, 'day').format('YYYY-MM-DD'),
+      ];
+      break;
+    }
+    case 'today': {
+      arr = [dayjs().format('YYYY-MM-DD'), dayjs().format('YYYY-MM-DD')];
+      break;
+    }
+  }
+
+  return arr;
+}
+
 startCron(() => {
-  itHomeJobs([
-    dayjs().format('YYYY-MM-DD'),
-    dayjs().subtract(1, 'day').format('YYYY-MM-DD'),
-  ]);
+  let arr = genDateRange('before9');
+  itHomeJobs(arr);
 }, '0 0 9 * * *');
 
 startCron(() => {
-  itHomeJobs([dayjs().format('YYYY-MM-DD'), dayjs().format('YYYY-MM-DD')]);
+  let arr = genDateRange('today');
+  itHomeJobs(arr);
 }, '0 0 12,16 * * *');
-
-// itHomeJobs([
-//   dayjs().format('YYYY-MM-DD'),
-//   dayjs('2022-09-01').format('YYYY-MM-DD'),
-// ]);
