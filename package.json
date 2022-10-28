@@ -15,6 +15,7 @@
     "fs-extra": "^10.1.0",
     "googleapis": "67.1.0",
     "handlebars": "^4.7.7",
+    "mongodb": "^4.11.0",
     "node-url-shortener": "^2.0.3",
     "pm2": "^5.2.0",
     "puppeteer": "^16.1.0",
