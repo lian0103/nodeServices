@@ -303,6 +303,13 @@
     {
         "author": "ycchiuuuu",
         "topic": "前端技能樹的十萬個為什麼",
+        "title": "Day 14 - 為什麼要用 React Router",
+        "href": "https://ithelp.ithome.com.tw/articles/10300835",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "ycchiuuuu",
+        "topic": "前端技能樹的十萬個為什麼",
         "title": "Day 15 - 為什麼要用 RESTful API",
         "href": "https://ithelp.ithome.com.tw/articles/10301314",
         "updateTime": "2022-09-30"
@@ -1029,6 +1036,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "Ko",
+        "topic": "自己做一個價值幾十萬的動態網站，學會Mern開發、前台UI設計各式觀念與各式Lib、typescript你該學會的前端技術",
+        "title": "連接創建管理hotel user room頁面挑戰 能修改與新增的UI視窗與完賽感言",
+        "href": "https://ithelp.ithome.com.tw/articles/10308975",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "louxin17",
         "topic": "Django新手指南",
         "title": "今晚，我想來一份 江狗(Django) 鐵人Day01",
@@ -1123,6 +1137,13 @@
         "author": "louxin17",
         "topic": "Django新手指南",
         "title": "南無阿彌陀螺(?) 設定資料庫(下) 江狗(Django) 鐵人Day14",
+        "href": "https://ithelp.ithome.com.tw/articles/10298028",
+        "updateTime": "2022-09-25"
+    },
+    {
+        "author": "louxin17",
+        "topic": "Django新手指南",
+        "title": "南無阿彌陀螺 (?) 設定資料庫(下) 江狗(Django) 鐵人Day14",
         "href": "https://ithelp.ithome.com.tw/articles/10298028",
         "updateTime": "2022-09-25"
     },
@@ -1417,6 +1438,13 @@
         "author": "阿壹",
         "topic": "今天我想來在 Angular 應用程式上加上測試保護",
         "title": "端對端測試 - 利用 Cucumber 撰寫登入作業測試規格",
+        "href": "https://ithelp.ithome.com.tw/articles/10307320",
+        "updateTime": "2022-10-11"
+    },
+    {
+        "author": "阿壹",
+        "topic": "今天我想來在 Angular 應用程式上加上測試保護",
+        "title": "Day 26 - 端對端測試 - 利用 Cucumber 撰寫登入作業測試規格",
         "href": "https://ithelp.ithome.com.tw/articles/10307320",
         "updateTime": "2022-10-11"
     },
@@ -2186,7 +2214,21 @@
     {
         "author": "安揪拉",
         "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
+        "title": "真的好想離開 Vue 3 新手村 - Day 14: style scoped 原理與特殊選擇器 :deep()＆:slotted()",
+        "href": "https://ithelp.ithome.com.tw/articles/10300975",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "安揪拉",
+        "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
         "title": "Day 15: 在 Vue 專案使用 Sass/SCSS 並共用變數 (feat. Vite)",
+        "href": "https://ithelp.ithome.com.tw/articles/10301528",
+        "updateTime": "2022-09-30"
+    },
+    {
+        "author": "安揪拉",
+        "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
+        "title": "Day 15: 在 Vue 專案使用 Sass/SCSS +共用變數 (feat. Vite)",
         "href": "https://ithelp.ithome.com.tw/articles/10301528",
         "updateTime": "2022-09-30"
     },
@@ -2221,7 +2263,21 @@
     {
         "author": "安揪拉",
         "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
+        "title": "Day 19: 你可能不知道的 v-model - 為何多選綁定陣列不能用 reactive()?",
+        "href": "https://ithelp.ithome.com.tw/articles/10303899",
+        "updateTime": "2022-10-04"
+    },
+    {
+        "author": "安揪拉",
+        "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
         "title": "Day 20: 在 Vue 發 API 之前 - 先學 axios 基礎與封裝管理 API",
+        "href": "https://ithelp.ithome.com.tw/articles/10304656",
+        "updateTime": "2022-10-05"
+    },
+    {
+        "author": "安揪拉",
+        "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
+        "title": "Day 20: 在發 API 之前 - 先學 axios 基礎與封裝管理 API",
         "href": "https://ithelp.ithome.com.tw/articles/10304656",
         "updateTime": "2022-10-05"
     },
@@ -2263,7 +2319,21 @@
     {
         "author": "安揪拉",
         "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
+        "title": "Day 25: 來發 API 吧！Pinia 語法學完馬上用",
+        "href": "https://ithelp.ithome.com.tw/articles/10306919",
+        "updateTime": "2022-10-10"
+    },
+    {
+        "author": "安揪拉",
+        "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
         "title": "Day 26: 在 Vue router - navigation guard 中使用 Pinia store 的小眉角",
+        "href": "https://ithelp.ithome.com.tw/articles/10307394",
+        "updateTime": "2022-10-11"
+    },
+    {
+        "author": "安揪拉",
+        "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
+        "title": "Day 26: 在 Vue router - Navigation Guard 中使用 Pinia store 的小眉角",
         "href": "https://ithelp.ithome.com.tw/articles/10307394",
         "updateTime": "2022-10-11"
     },
@@ -2292,6 +2362,20 @@
         "author": "安揪拉",
         "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
         "title": "Day 30: Vue 3 響應式原理 - 如何收集與更新依賴 (無敵簡化版)",
+        "href": "https://ithelp.ithome.com.tw/articles/10308877",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "安揪拉",
+        "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
+        "title": "完賽心得 - 離開新手村了嗎？",
+        "href": "https://ithelp.ithome.com.tw/articles/10308881",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "安揪拉",
+        "topic": "真的好想離開 Vue 3 新手村 feat. CompositionAPI",
+        "title": "Day 30: Vue 3 響應式原理 - effect 如何響應 (無敵簡化版)",
         "href": "https://ithelp.ithome.com.tw/articles/10308877",
         "updateTime": "2022-10-15"
     },
@@ -2376,6 +2460,13 @@
         "author": "Felix阿甫",
         "topic": "30天學習Tauri",
         "title": "12.編寫Tauri Core －Backend (二)",
+        "href": "https://ithelp.ithome.com.tw/articles/10299518",
+        "updateTime": "2022-09-27"
+    },
+    {
+        "author": "Felix阿甫",
+        "topic": "30天學習Tauri",
+        "title": "12.實作Tauri Todo －Backend (二) 編寫Tauri Core",
         "href": "https://ithelp.ithome.com.tw/articles/10299518",
         "updateTime": "2022-09-27"
     },
@@ -2490,6 +2581,13 @@
         "title": "29.實作Tauri Todo - 構建及發布",
         "href": "https://ithelp.ithome.com.tw/articles/10308594",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "Felix阿甫",
+        "topic": "30天學習Tauri",
+        "title": "30.完結與感言",
+        "href": "https://ithelp.ithome.com.tw/articles/10308903",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "bywater529",
@@ -3001,6 +3099,13 @@
         "title": "[Day13]Kubernetes與GKE簡介",
         "href": "https://ithelp.ithome.com.tw/articles/10300305",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "twmjavacoe",
+        "topic": "Google商家大解密就靠網頁設計來加成",
+        "title": "[Day14] Jayspt 介紹",
+        "href": "https://ithelp.ithome.com.tw/articles/10300810",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "twmjavacoe",
@@ -4578,9 +4683,30 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "mark0613",
+        "topic": "Spring Boot... 深不可測",
+        "title": "Day 29 - 檢驗出牌",
+        "href": "https://ithelp.ithome.com.tw/articles/10308984",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "mark0613",
+        "topic": "Spring Boot... 深不可測",
+        "title": "Day 30 - 結算",
+        "href": "https://ithelp.ithome.com.tw/articles/10308994",
+        "updateTime": "2022-10-16"
+    },
+    {
         "author": "Vivian Yeh",
         "topic": "致 JavaScript 開發者的 Functional Programming 新手指南",
         "title": "Day 1： 致 JavaScript 開發者的 Functional Programming 指南",
+        "href": "https://ithelp.ithome.com.tw/articles/10287567",
+        "updateTime": "2022-09-03"
+    },
+    {
+        "author": "Vivian Yeh",
+        "topic": "致 JavaScript 開發者的 Functional Programming 新手指南",
+        "title": "Day 1： 致 JavaScript 開發者的 Functional Programming 指南（修正版）",
         "href": "https://ithelp.ithome.com.tw/articles/10287567",
         "updateTime": "2022-09-03"
     },
@@ -4594,7 +4720,21 @@
     {
         "author": "Vivian Yeh",
         "topic": "致 JavaScript 開發者的 Functional Programming 新手指南",
+        "title": "Day 2 ：初探設計典範（1）：FP 的崛起、沒落、東山再起（修正版）",
+        "href": "https://ithelp.ithome.com.tw/articles/10287729",
+        "updateTime": "2022-09-04"
+    },
+    {
+        "author": "Vivian Yeh",
+        "topic": "致 JavaScript 開發者的 Functional Programming 新手指南",
         "title": "Day 3：初探設計模式（2）：FP 設計模式簡介",
+        "href": "https://ithelp.ithome.com.tw/articles/10287915",
+        "updateTime": "2022-09-05"
+    },
+    {
+        "author": "Vivian Yeh",
+        "topic": "致 JavaScript 開發者的 Functional Programming 新手指南",
+        "title": "Day 3：初探設計典範（2）：FP 簡介（修正版）",
         "href": "https://ithelp.ithome.com.tw/articles/10287915",
         "updateTime": "2022-09-05"
     },
@@ -4637,6 +4777,13 @@
         "author": "Vivian Yeh",
         "topic": "致 JavaScript 開發者的 Functional Programming 新手指南",
         "title": "Day 9 ：何謂 Immutable Data？（1）：關於 Immutable 與 Mutable",
+        "href": "https://ithelp.ithome.com.tw/articles/10289179",
+        "updateTime": "2022-09-11"
+    },
+    {
+        "author": "Vivian Yeh",
+        "topic": "致 JavaScript 開發者的 Functional Programming 新手指南",
+        "title": "Day 9 ：何謂 Immutable Data？（1）：關於 Immutable 與 Mutable（修正版）",
         "href": "https://ithelp.ithome.com.tw/articles/10289179",
         "updateTime": "2022-09-11"
     },
@@ -4758,6 +4905,13 @@
         "title": "Day 26 ：第三方函式庫（1）：初識Lodash.js",
         "href": "https://ithelp.ithome.com.tw/articles/10300289",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "Vivian Yeh",
+        "topic": "致 JavaScript 開發者的 Functional Programming 新手指南",
+        "title": "Day 27 ：第三方函式庫（2）：從 Lodash.js 深入了解 JavaScript",
+        "href": "https://ithelp.ithome.com.tw/articles/10300925",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "Vivian Yeh",
@@ -4982,6 +5136,13 @@
         "title": "Node.js - 載入靜態檔案 static",
         "href": "https://ithelp.ithome.com.tw/articles/10308430",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "Tim Hsu",
+        "topic": "Node.js 從零開始",
+        "title": "Node.js - EJS 介紹與起手式",
+        "href": "https://ithelp.ithome.com.tw/articles/10308702",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "jddj42840",
@@ -6330,6 +6491,13 @@
     {
         "author": "linyencheng",
         "topic": "前端三分鐘 X 從把妹角度理解前後端如何和平相處",
+        "title": "想架站不會寫網頁，那就用 WordPress 吧 (10)",
+        "href": "https://ithelp.ithome.com.tw/articles/10298054",
+        "updateTime": "2022-09-25"
+    },
+    {
+        "author": "linyencheng",
+        "topic": "前端三分鐘 X 從把妹角度理解前後端如何和平相處",
         "title": "用 Hexo 和 Github Pages 建立部落格吧 (11)",
         "href": "https://ithelp.ithome.com.tw/articles/10298672",
         "updateTime": "2022-09-26"
@@ -6963,6 +7131,27 @@
         "title": "你可能不知道的(Web)API--FinalizationRegistry(GC)",
         "href": "https://ithelp.ithome.com.tw/articles/10308476",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "lagagain",
+        "topic": "這些那些你可能不知道我不知道的Web技術細節",
+        "title": "目錄與完賽感想",
+        "href": "https://ithelp.ithome.com.tw/articles/10308899",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "lagagain",
+        "topic": "這些那些你可能不知道我不知道的Web技術細節",
+        "title": "你可能不知道的Web API--Web Locks",
+        "href": "https://ithelp.ithome.com.tw/articles/10308895",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "lagagain",
+        "topic": "這些那些你可能不知道我不知道的Web技術細節",
+        "title": "2022 iThome 鐵人賽-有意思的系列(個人記錄用)",
+        "href": "https://ithelp.ithome.com.tw/articles/10309040",
+        "updateTime": "2022-10-16"
     },
     {
         "author": "Ryvn's Boss",
@@ -7737,7 +7926,21 @@
     {
         "author": "ShawnWu",
         "topic": "angular專案開發指南",
+        "title": "Angular 專案從零開始",
+        "href": "https://ithelp.ithome.com.tw/articles/10290666",
+        "updateTime": "2022-09-15"
+    },
+    {
+        "author": "ShawnWu",
+        "topic": "angular專案開發指南",
         "title": "Angular框架的特性",
+        "href": "https://ithelp.ithome.com.tw/articles/10290861",
+        "updateTime": "2022-09-16"
+    },
+    {
+        "author": "ShawnWu",
+        "topic": "angular專案開發指南",
+        "title": "Angular 框架的特性",
         "href": "https://ithelp.ithome.com.tw/articles/10290861",
         "updateTime": "2022-09-16"
     },
@@ -8472,6 +8675,13 @@
     {
         "author": "Zet",
         "topic": "一次打破 React 常見的學習門檻與觀念誤解",
+        "title": "[Day 14] 以 functional updater 來呼叫 setState",
+        "href": "https://ithelp.ithome.com.tw/articles/10300743",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "Zet",
+        "topic": "一次打破 React 常見的學習門檻與觀念誤解",
         "title": "[Day 15] 維持 React 資料流可靠性的核心關鍵：Immutable state",
         "href": "https://ithelp.ithome.com.tw/articles/10301603",
         "updateTime": "2022-09-30"
@@ -8573,6 +8783,13 @@
         "title": "[Day 29] 一次弄懂 React hooks 的運作原理與設計思維（下）",
         "href": "https://ithelp.ithome.com.tw/articles/10308689",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "Zet",
+        "topic": "一次打破 React 常見的學習門檻與觀念誤解",
+        "title": "[Day 30] 一次打破 React 常見的的學習門檻與觀念誤解：系列文總結以及完賽感言",
+        "href": "https://ithelp.ithome.com.tw/articles/10308940",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "albert9137",
@@ -8830,6 +9047,13 @@
         "author": "weiiiiiiii",
         "topic": "關於SASS/SCSS",
         "title": "[DAY7]SASS顏色函數(1) |有甚麼顏色表示方法?查看顏色組成",
+        "href": "https://ithelp.ithome.com.tw/articles/10292587",
+        "updateTime": "2022-09-21"
+    },
+    {
+        "author": "weiiiiiiii",
+        "topic": "關於SASS/SCSS",
+        "title": "[DAY7]SASS顏色函數(1)",
         "href": "https://ithelp.ithome.com.tw/articles/10292587",
         "updateTime": "2022-09-21"
     },
@@ -10255,6 +10479,125 @@
         "updateTime": "2022-10-15"
     },
     {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day31 Object 共享的屬性描述器 & 資料描述器",
+        "href": "https://ithelp.ithome.com.tw/articles/10309067",
+        "updateTime": "2022-10-16"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day32 Object 訪問描述器：請詳閱拜訪注意事項",
+        "href": "https://ithelp.ithome.com.tw/articles/10309107",
+        "updateTime": "2022-10-17"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day33 Object 不可變性：鑽石恆久遠，一顆永流傳",
+        "href": "https://ithelp.ithome.com.tw/articles/10309183",
+        "updateTime": "2022-10-18"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day34 Prototype 物件導向：繞來繞去一切都歸於物件",
+        "href": "https://ithelp.ithome.com.tw/articles/10309253",
+        "updateTime": "2022-10-19"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day35 Prototype 實例物件 & 建構子函式：白馬非馬...而是馬的實例",
+        "href": "https://ithelp.ithome.com.tw/articles/10309282",
+        "updateTime": "2022-10-20"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day36 Prototype 取得物件原型：翻翻族譜，追本溯源",
+        "href": "https://ithelp.ithome.com.tw/articles/10309303",
+        "updateTime": "2022-10-21"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day37 Prototype 工廠函式 v.s. 建構子函式",
+        "href": "https://ithelp.ithome.com.tw/articles/10309316",
+        "updateTime": "2022-10-22"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day38 Prototype OOP 封裝 & 抽象：打包裝箱並簡化",
+        "href": "https://ithelp.ithome.com.tw/articles/10309337",
+        "updateTime": "2022-10-23"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day39 Prototype OOP 繼承：手寫族譜，自訂原型",
+        "href": "https://ithelp.ithome.com.tw/articles/10309361",
+        "updateTime": "2022-10-24"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day40 Prototype OOP 多型：同胞手足各有所長",
+        "href": "https://ithelp.ithome.com.tw/articles/10309378",
+        "updateTime": "2022-10-25"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day41 Prototype OOP 混合：不需要繼承的繼承",
+        "href": "https://ithelp.ithome.com.tw/articles/10309379",
+        "updateTime": "2022-10-26"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day42 Prototype 遮蔽：一葉障目，不見泰山",
+        "href": "https://ithelp.ithome.com.tw/articles/10309426",
+        "updateTime": "2022-10-27"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day43 Prototype 委託：自己辦不到的，就外包出去吧",
+        "href": "https://ithelp.ithome.com.tw/articles/10309461",
+        "updateTime": "2022-10-28"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day44 Class 開篇：嶄新的物件導向語法...糖",
+        "href": "https://ithelp.ithome.com.tw/articles/10309473",
+        "updateTime": "2022-10-29"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day45 Class 應用：語法搭配，碰撞新滋味",
+        "href": "https://ithelp.ithome.com.tw/articles/10309479",
+        "updateTime": "2022-10-30"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day46 Class 結語：考察與總結",
+        "href": "https://ithelp.ithome.com.tw/articles/10309490",
+        "updateTime": "2022-10-31"
+    },
+    {
+        "author": "Emi",
+        "topic": "就是要搞懂 JavaScript 啦！",
+        "title": "Day47 Type 開篇：值的各種樣貌",
+        "href": "https://ithelp.ithome.com.tw/articles/10309544",
+        "updateTime": "2022-11-01"
+    },
+    {
         "author": "Ray",
         "topic": "終究都要學 React 何不現在學呢？",
         "title": "終究都要學 React 何不現在學呢？ - React 基礎 - React 是什麼？ - (1)",
@@ -10572,6 +10915,13 @@
     {
         "author": "Kent",
         "topic": "意識界歸來的前端",
+        "title": "哪些標籤不適合設置文字內容？",
+        "href": "https://ithelp.ithome.com.tw/articles/10300883",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "Kent",
+        "topic": "意識界歸來的前端",
         "title": "如何使用無語化標籤 div、span",
         "href": "https://ithelp.ithome.com.tw/articles/10301427",
         "updateTime": "2022-09-30"
@@ -10694,6 +11044,13 @@
         "title": "line box 和字體關係",
         "href": "https://ithelp.ithome.com.tw/articles/10308764",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "Kent",
+        "topic": "意識界歸來的前端",
+        "title": "隔線系統 padding 與 gutter",
+        "href": "https://ithelp.ithome.com.tw/articles/10309006",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "rocketpencil",
@@ -11109,6 +11466,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "Dolly",
+        "topic": "30天UIUX自學之路",
+        "title": "Day30 參加鐵人賽讓我學到的3件事",
+        "href": "https://ithelp.ithome.com.tw/articles/10308622",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "gjlmotea",
         "topic": "Angular牙起來",
         "title": "# Day01 Angular牙起來 - 開場簡介",
@@ -11310,6 +11674,13 @@
         "title": "# Day29 【牙起來】 彈跳互動視窗 - Modal",
         "href": "https://ithelp.ithome.com.tw/articles/10308766",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "gjlmotea",
+        "topic": "Angular牙起來",
+        "title": "# Day30 【牙起來】 彈跳互動視窗2 - Modal",
+        "href": "https://ithelp.ithome.com.tw/articles/10309021",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "黃昱翔",
@@ -11916,9 +12287,30 @@
     {
         "author": "Mizok",
         "topic": "Three.js 學習日誌",
+        "title": "Day27 - 打造質感系3D聊天室 - three.js + socket.io(五)",
+        "href": "https://ithelp.ithome.com.tw/articles/10308353",
+        "updateTime": "2022-10-13"
+    },
+    {
+        "author": "Mizok",
+        "topic": "Three.js 學習日誌",
         "title": "Day28 - 跟著甜甜圈大師~ 使用three.js + blender 一起製造甜甜圈",
         "href": "https://ithelp.ithome.com.tw/articles/10308516",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "Mizok",
+        "topic": "Three.js 學習日誌",
+        "title": "Day29 - 跟著甜甜圈大師~ 使用three.js + blender 一起製造甜甜圈 (二)",
+        "href": "https://ithelp.ithome.com.tw/articles/10308932",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "Mizok",
+        "topic": "Three.js 學習日誌",
+        "title": "Day30 - 看似是第30天，實際則是第31天的完賽心得",
+        "href": "https://ithelp.ithome.com.tw/articles/10309091",
+        "updateTime": "2022-10-16"
     },
     {
         "author": "ayugioh2003",
@@ -12465,6 +12857,13 @@
         "title": "Day 29 GraphQL(7) - Apollo Client - Gúa ê Tâi-gí chheh tô͘-su-koán(我的台語冊圖書館) app",
         "href": "https://ithelp.ithome.com.tw/articles/10308417",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "tjabi",
+        "topic": "Full Stack Web Development  網站實作",
+        "title": "Day 30GraphQL(8) - Apollo Client - Gúa ê Tâi-gí chheh tô͘-su-koán(我的台語冊圖書館) app",
+        "href": "https://ithelp.ithome.com.tw/articles/10308794",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "kenliao0808",
@@ -13323,7 +13722,21 @@
     {
         "author": "mue",
         "topic": "網頁設計隨筆日記",
+        "title": "[Day11] 更有巢狀概念的 scss  (prepros)",
+        "href": "https://ithelp.ithome.com.tw/articles/10297750",
+        "updateTime": "2022-09-24"
+    },
+    {
+        "author": "mue",
+        "topic": "網頁設計隨筆日記",
         "title": "[Day12] scss 使用筆記",
+        "href": "https://ithelp.ithome.com.tw/articles/10298410",
+        "updateTime": "2022-09-25"
+    },
+    {
+        "author": "mue",
+        "topic": "網頁設計隨筆日記",
+        "title": "[Day12] scss 筆記 - @use <更新>",
         "href": "https://ithelp.ithome.com.tw/articles/10298410",
         "updateTime": "2022-09-25"
     },
@@ -13755,6 +14168,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "Genos",
+        "topic": "Nuxt 3 - 因為還不穩定，所以來踩地雷",
+        "title": "[Day 30] 發掘更多 Nuxt3 生態的工具 - Nuxt Module",
+        "href": "https://ithelp.ithome.com.tw/articles/10308859",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "Sean",
         "topic": "一探紅寶石的神秘面紗 - Ruby 及 Rails入門介紹 系列",
         "title": "Day 1 - 進入Ruby世界記得說 “hello world”",
@@ -14154,6 +14574,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "whlshy",
+        "topic": "新手進化日記，從React至Redux Saga",
+        "title": "Day 30 - 影片標記系統最終章：Saga整合 / 完賽感言",
+        "href": "https://ithelp.ithome.com.tw/articles/10309005",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "前端小小咖",
         "topic": "30天讓你爺爺取得 FreeCodeCamp 響應式網頁設計證書",
         "title": "Day1 - 準備",
@@ -14171,6 +14598,13 @@
         "author": "前端小小咖",
         "topic": "30天讓你爺爺取得 FreeCodeCamp 響應式網頁設計證書",
         "title": "Day3 - 點餐",
+        "href": "https://ithelp.ithome.com.tw/articles/10293402",
+        "updateTime": "2022-09-18"
+    },
+    {
+        "author": "前端小小咖",
+        "topic": "30天讓你爺爺取得 FreeCodeCamp 響應式網頁設計證書",
+        "title": "Day3 - 點餐 (font,盒模型)",
         "href": "https://ithelp.ithome.com.tw/articles/10293402",
         "updateTime": "2022-09-18"
     },
@@ -14220,6 +14654,13 @@
         "author": "前端小小咖",
         "topic": "30天讓你爺爺取得 FreeCodeCamp 響應式網頁設計證書",
         "title": "Day10 - 無障礙網頁",
+        "href": "https://ithelp.ithome.com.tw/articles/10295366",
+        "updateTime": "2022-09-25"
+    },
+    {
+        "author": "前端小小咖",
+        "topic": "30天讓你爺爺取得 FreeCodeCamp 響應式網頁設計證書",
+        "title": "Day10 - 無障礙網頁 (WAI-ARIA)",
         "href": "https://ithelp.ithome.com.tw/articles/10295366",
         "updateTime": "2022-09-25"
     },
@@ -14276,6 +14717,13 @@
         "author": "前端小小咖",
         "topic": "30天讓你爺爺取得 FreeCodeCamp 響應式網頁設計證書",
         "title": "Day19 - 城市(下)",
+        "href": "https://ithelp.ithome.com.tw/articles/10304128",
+        "updateTime": "2022-10-04"
+    },
+    {
+        "author": "前端小小咖",
+        "topic": "30天讓你爺爺取得 FreeCodeCamp 響應式網頁設計證書",
+        "title": "Day19 - 城市(下) (background)",
         "href": "https://ithelp.ithome.com.tw/articles/10304128",
         "updateTime": "2022-10-04"
     },
@@ -14348,6 +14796,13 @@
         "title": "Day29 - 更多 (Font Awesome)",
         "href": "https://ithelp.ithome.com.tw/articles/10308436",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "前端小小咖",
+        "topic": "30天讓你爺爺取得 FreeCodeCamp 響應式網頁設計證書",
+        "title": "Day30 - 起點 (javascript)",
+        "href": "https://ithelp.ithome.com.tw/articles/10308915",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "Sid 吸管",
@@ -14621,6 +15076,13 @@
         "title": "{Day13}  小公主訂單網頁嘗試集＿第十三集＿濾鏡＋孔子＝教師節快樂",
         "href": "https://ithelp.ithome.com.tw/articles/10300280",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "icetong",
+        "topic": "訂單網頁嘗試集",
+        "title": "{Day14}  小公主訂單網頁嘗試集＿第十四集＿css_合成照",
+        "href": "https://ithelp.ithome.com.tw/articles/10300815",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "icetong",
@@ -15372,6 +15834,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "YUAN",
+        "topic": "教練我想做一個後台管理系統，阿我忘記我只有一個人沒有教練，那用試著以vue-pure-admin為基底做做看",
+        "title": "第三十一天 參賽心得",
+        "href": "https://ithelp.ithome.com.tw/articles/10308985",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "sean85120",
         "topic": "傳承D的意志~ 邁向Django的偉大航道",
         "title": "[Day 01] 啟航! 傳承D的意志~ 邁向Django的偉大航道",
@@ -15566,6 +16035,13 @@
         "title": "[Day 29] 激戰篇: 新世界的夥伴: Celery & Redis(下)",
         "href": "https://ithelp.ithome.com.tw/articles/10308502",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "sean85120",
+        "topic": "傳承D的意志~ 邁向Django的偉大航道",
+        "title": "[Day 30] 鐵人賽結語: 航行在偉大航道",
+        "href": "https://ithelp.ithome.com.tw/articles/10308912",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "Nicolas",
@@ -15965,6 +16441,13 @@
         "title": "【Day 29】專案部署 - Railway",
         "href": "https://ithelp.ithome.com.tw/articles/10290222",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "Sofffia",
+        "topic": "MERN Stack + Tailwind CSS - React 小專案實踐計畫",
+        "title": "【Day 30】總結 & 心得",
+        "href": "https://ithelp.ithome.com.tw/articles/10290223",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "rzchen",
@@ -16371,6 +16854,20 @@
         "title": "[Day29] - Lezer.js - 將自定義的 Grammar 拿到 CodeMirror 中做使用",
         "href": "https://ithelp.ithome.com.tw/articles/10308577",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "Tree",
+        "topic": "Parser 的深入研究",
+        "title": "[Day30] - 整理一下 30 天的內容",
+        "href": "https://ithelp.ithome.com.tw/articles/10308976",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "Tree",
+        "topic": "Parser 的深入研究",
+        "title": "[Day31] - 自製 CodeMirror 的 SCSS 語法包",
+        "href": "https://ithelp.ithome.com.tw/articles/10309030",
+        "updateTime": "2022-10-16"
     },
     {
         "author": "韋政",
@@ -17159,6 +17656,13 @@
     {
         "author": "ReccaChao",
         "topic": "Laravel 9 漫遊，享受魔法般的極速網頁開發體驗",
+        "title": "Day 25：快取之外的加速方式：透過 queue 非同步的處理費時任務",
+        "href": "https://ithelp.ithome.com.tw/articles/10298422",
+        "updateTime": "2022-09-25"
+    },
+    {
+        "author": "ReccaChao",
+        "topic": "Laravel 9 漫遊，享受魔法般的極速網頁開發體驗",
         "title": "Day 26：協助開發中除錯的好幫手：Laravel Telescope",
         "href": "https://ithelp.ithome.com.tw/articles/10299220",
         "updateTime": "2022-09-26"
@@ -17176,6 +17680,13 @@
         "title": "Day 28：用Laravel 處理全文搜索：Laravel Scout",
         "href": "https://ithelp.ithome.com.tw/articles/10300606",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "ReccaChao",
+        "topic": "Laravel 9 漫遊，享受魔法般的極速網頁開發體驗",
+        "title": "Day 29：學習 Laravel 的各個資源",
+        "href": "https://ithelp.ithome.com.tw/articles/10301201",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "ReccaChao",
@@ -17591,6 +18102,13 @@
         "updateTime": "2022-10-10"
     },
     {
+        "author": "yojijun",
+        "topic": "我的床邊故事Git  and GitHub",
+        "title": "番外篇  更改 Hexo  Themes",
+        "href": "https://ithelp.ithome.com.tw/articles/10308908",
+        "updateTime": "2022-10-18"
+    },
+    {
         "author": "baieQQ",
         "topic": "剛接觸前端一個月的小白 - JavaScript30 挑戰筆記",
         "title": "JS30 -> 01 - JavaScript Drum Kit",
@@ -17785,6 +18303,13 @@
         "title": "JS30 -> 30 - Whack A Mole",
         "href": "https://ithelp.ithome.com.tw/articles/10308737",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "baieQQ",
+        "topic": "剛接觸前端一個月的小白 - JavaScript30 挑戰筆記",
+        "title": "# JS30 -> 總心得",
+        "href": "https://ithelp.ithome.com.tw/articles/10308982",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "我是誰我在哪...",
@@ -18028,6 +18553,13 @@
         "author": "HY",
         "topic": "從0開始",
         "title": "從0開始爬 - 圖片、表格、影片",
+        "href": "https://ithelp.ithome.com.tw/articles/10294770",
+        "updateTime": "2022-09-20"
+    },
+    {
+        "author": "HY",
+        "topic": "從0開始",
+        "title": "從0開始爬HTML - 圖片、表格、影片",
         "href": "https://ithelp.ithome.com.tw/articles/10294770",
         "updateTime": "2022-09-20"
     },
@@ -18403,6 +18935,41 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "jasonlee2357",
+        "topic": "從新開始學習p5.js畫出一片天",
+        "title": "D31_網頁中表格的介面操作",
+        "href": "https://ithelp.ithome.com.tw/articles/10308806",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "jasonlee2357",
+        "topic": "從新開始學習p5.js畫出一片天",
+        "title": "D32_網路讀取資料的操作(JS AJAX, CORS)",
+        "href": "https://ithelp.ithome.com.tw/articles/10309052",
+        "updateTime": "2022-10-17"
+    },
+    {
+        "author": "jasonlee2357",
+        "topic": "從新開始學習p5.js畫出一片天",
+        "title": "D33_網路通訊資料傳送的操作(WebSocket, OSC, MQTT)",
+        "href": "https://ithelp.ithome.com.tw/articles/10309111",
+        "updateTime": "2022-10-17"
+    },
+    {
+        "author": "jasonlee2357",
+        "topic": "從新開始學習p5.js畫出一片天",
+        "title": "D34_資料記錄與儲存的操作",
+        "href": "https://ithelp.ithome.com.tw/articles/10309167",
+        "updateTime": "2022-10-18"
+    },
+    {
+        "author": "jasonlee2357",
+        "topic": "從新開始學習p5.js畫出一片天",
+        "title": "D35_網頁session與cookie的記錄與儲存的操作",
+        "href": "https://ithelp.ithome.com.tw/articles/10309201",
+        "updateTime": "2022-10-19"
+    },
+    {
         "author": "rita0124",
         "topic": "適用於傳產從業人員的實用報表製圖術",
         "title": "【Day 1】 簡單的直條圖",
@@ -18702,6 +19269,13 @@
         "title": "ASP.NET Core Blazor 系列 - 014 身分驗證 實作JWT",
         "href": "https://ithelp.ithome.com.tw/articles/10300220",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "Jim Wang",
+        "topic": "我與 Blazor 的 30 天",
+        "title": "ASP.NET Core Blazor 系列 - 015 身分驗證 登入畫面",
+        "href": "https://ithelp.ithome.com.tw/articles/10300996",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "Jim Wang",
@@ -19105,6 +19679,13 @@
     {
         "author": "davimperiald",
         "topic": "快還要更快，讀作 quick 的下一代傳輸層協定: QUIC",
+        "title": "【Day 14】Address Validation 機制(二): 透過 Retry packet 傳送 token",
+        "href": "https://ithelp.ithome.com.tw/articles/10300894",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "davimperiald",
+        "topic": "快還要更快，讀作 quick 的下一代傳輸層協定: QUIC",
         "title": "【Day 15】Connection Migration(一): 簡介",
         "href": "https://ithelp.ithome.com.tw/articles/10301611",
         "updateTime": "2022-09-30"
@@ -19175,6 +19756,13 @@
     {
         "author": "EasonChang",
         "topic": "從零開始打造炫砲個人部落格，使用 Next.js、ContentLayer、i18next 等現代技術",
+        "title": "「從零開始打造炫砲個人部落格」系列簡介 - Modern Next.js Blog 系列 #01",
+        "href": "https://ithelp.ithome.com.tw/articles/10291960",
+        "updateTime": "2022-09-16"
+    },
+    {
+        "author": "EasonChang",
+        "topic": "從零開始打造炫砲個人部落格，使用 Next.js、ContentLayer、i18next 等現代技術",
         "title": "建立 Next.js 專案 - Modern Blog 30 系列",
         "href": "https://ithelp.ithome.com.tw/articles/10292743",
         "updateTime": "2022-09-17"
@@ -19238,6 +19826,13 @@
     {
         "author": "EasonChang",
         "topic": "從零開始打造炫砲個人部落格，使用 Next.js、ContentLayer、i18next 等現代技術",
+        "title": "Dark Mode 深色模式支援，使用 Tailwind CSS、next-themes - Modern Next.js Blog 系列 #10",
+        "href": "https://ithelp.ithome.com.tw/articles/10298268",
+        "updateTime": "2022-09-25"
+    },
+    {
+        "author": "EasonChang",
+        "topic": "從零開始打造炫砲個人部落格，使用 Next.js、ContentLayer、i18next 等現代技術",
         "title": "全站樣式切版 - Modern Blog 30 系列 #11",
         "href": "https://ithelp.ithome.com.tw/articles/10299066",
         "updateTime": "2022-09-26"
@@ -19255,6 +19850,13 @@
         "title": "文章內頁樣式切版 - Modern Blog 30 系列 #13",
         "href": "https://ithelp.ithome.com.tw/articles/10300526",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "EasonChang",
+        "topic": "從零開始打造炫砲個人部落格，使用 Next.js、ContentLayer、i18next 等現代技術",
+        "title": "加入程式碼 Syntax Highlighting，使用 rehype-prism-plus - Modern Next.js Blog 系列 #14",
+        "href": "https://ithelp.ithome.com.tw/articles/10301243",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "EasonChang",
@@ -19362,6 +19964,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "EasonChang",
+        "topic": "從零開始打造炫砲個人部落格，使用 Next.js、ContentLayer、i18next 等現代技術",
+        "title": "總結與回顧：一個炫砲技術部落格的誕生 - Modern Next.js Blog 系列 #30",
+        "href": "https://ithelp.ithome.com.tw/articles/10308942",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "HelloKayac",
         "topic": "【 我不會寫 React Component 】",
         "title": "導讀【 我不會寫 React Component 】",
@@ -19465,6 +20074,13 @@
         "title": "如何製作日期選擇 Date Picker 3【 date picker | 我不會寫 React Component 】",
         "href": "https://ithelp.ithome.com.tw/articles/10300160",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "HelloKayac",
+        "topic": "【 我不會寫 React Component 】",
+        "title": "如何製作日期選擇 Date Picker 4【 date picker | 我不會寫 React Component 】",
+        "href": "https://ithelp.ithome.com.tw/articles/10300869",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "HelloKayac",
@@ -19658,7 +20274,21 @@
     {
         "author": "Ryan",
         "topic": "Nuxt 3 學習筆記",
+        "title": "[Day 14] Nuxt 3 Server API 與 Nitro Engine",
+        "href": "https://ithelp.ithome.com.tw/articles/10301197",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "Ryan",
+        "topic": "Nuxt 3 學習筆記",
         "title": "[Day 15] Nuxt 3資料獲取 (Data Fetching)",
+        "href": "https://ithelp.ithome.com.tw/articles/10301876",
+        "updateTime": "2022-09-30"
+    },
+    {
+        "author": "Ryan",
+        "topic": "Nuxt 3 學習筆記",
+        "title": "[Day 15] Nuxt 3 資料獲取 (Data Fetching)",
         "href": "https://ithelp.ithome.com.tw/articles/10301876",
         "updateTime": "2022-09-30"
     },
@@ -19761,6 +20391,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "Ryan",
+        "topic": "Nuxt 3 學習筆記",
+        "title": "[Day 30] Nuxt 3 就剩最後一步了 - 部署 (Deployment)",
+        "href": "https://ithelp.ithome.com.tw/articles/10308825",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "Vic",
         "topic": "JavaScript 之路，往前邁進吧！",
         "title": "JS之路 Day01 - 開始與結束的序言",
@@ -19854,6 +20491,13 @@
     {
         "author": "Vic",
         "topic": "JavaScript 之路，往前邁進吧！",
+        "title": "JS之路 Day14 - Promise(承諾)",
+        "href": "https://ithelp.ithome.com.tw/articles/10301019",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "Vic",
+        "topic": "JavaScript 之路，往前邁進吧！",
         "title": "JS之路 Day15 - Promise Chain(承諾鏈)",
         "href": "https://ithelp.ithome.com.tw/articles/10301598",
         "updateTime": "2022-09-30"
@@ -19917,6 +20561,13 @@
     {
         "author": "Vic",
         "topic": "JavaScript 之路，往前邁進吧！",
+        "title": "JS之路 Day23 - Logical operators (邏輯運算子) AND、NOT篇",
+        "href": "https://ithelp.ithome.com.tw/articles/10305999",
+        "updateTime": "2022-10-08"
+    },
+    {
+        "author": "Vic",
+        "topic": "JavaScript 之路，往前邁進吧！",
         "title": "JS之路 Day024 - nullish coalescing operator (空值合併運算子)",
         "href": "https://ithelp.ithome.com.tw/articles/10306578",
         "updateTime": "2022-10-09"
@@ -19938,6 +20589,13 @@
     {
         "author": "Vic",
         "topic": "JavaScript 之路，往前邁進吧！",
+        "title": "JS之路 Day26 - Strict Mode(嚴格模式)",
+        "href": "https://ithelp.ithome.com.tw/articles/10307367",
+        "updateTime": "2022-10-11"
+    },
+    {
+        "author": "Vic",
+        "topic": "JavaScript 之路，往前邁進吧！",
         "title": "JS之路 Day027- JSON Methods(JSON 方法)",
         "href": "https://ithelp.ithome.com.tw/articles/10307819",
         "updateTime": "2022-10-12"
@@ -19945,7 +20603,21 @@
     {
         "author": "Vic",
         "topic": "JavaScript 之路，往前邁進吧！",
+        "title": "JS之路 Day27- JSON Methods(JSON 方法)",
+        "href": "https://ithelp.ithome.com.tw/articles/10307819",
+        "updateTime": "2022-10-12"
+    },
+    {
+        "author": "Vic",
+        "topic": "JavaScript 之路，往前邁進吧！",
         "title": "JS之路 Day028 - Currying (柯里化)",
+        "href": "https://ithelp.ithome.com.tw/articles/10308188",
+        "updateTime": "2022-10-13"
+    },
+    {
+        "author": "Vic",
+        "topic": "JavaScript 之路，往前邁進吧！",
+        "title": "JS之路 Day28 - Currying (柯里化)",
         "href": "https://ithelp.ithome.com.tw/articles/10308188",
         "updateTime": "2022-10-13"
     },
@@ -20158,6 +20830,13 @@
         "title": "Day29 如何包我們的IMAGE",
         "href": "https://ithelp.ithome.com.tw/articles/10308601",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "KBN",
+        "topic": ".NET教我做人",
+        "title": "Day30 不講功能只講我想說的",
+        "href": "https://ithelp.ithome.com.tw/articles/10308980",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "mackliu",
@@ -20408,6 +21087,13 @@
         "author": "Ju",
         "topic": "30天複習網頁前端設計!",
         "title": "Day7：HTML-表單",
+        "href": "https://ithelp.ithome.com.tw/articles/10294714",
+        "updateTime": "2022-09-22"
+    },
+    {
+        "author": "Ju",
+        "topic": "30天複習網頁前端設計!",
+        "title": "Day7：HTML-表單(上)",
         "href": "https://ithelp.ithome.com.tw/articles/10294714",
         "updateTime": "2022-09-22"
     },
@@ -21280,6 +21966,48 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "ShawnL",
+        "topic": "「你知道這是什麼嗎？」小白也能輕鬆瞭解的 Vue3 單元測試！Feat. Vitest + Vue Test Utils",
+        "title": "【語法ノ章】Vue Ecosystem 篇：Vue Router 測試",
+        "href": "https://ithelp.ithome.com.tw/articles/10308907",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "ShawnL",
+        "topic": "「你知道這是什麼嗎？」小白也能輕鬆瞭解的 Vue3 單元測試！Feat. Vitest + Vue Test Utils",
+        "title": "【語法ノ章】Vue Ecosystem 篇：Pinia 測試",
+        "href": "https://ithelp.ithome.com.tw/articles/10309064",
+        "updateTime": "2022-10-16"
+    },
+    {
+        "author": "ShawnL",
+        "topic": "「你知道這是什麼嗎？」小白也能輕鬆瞭解的 Vue3 單元測試！Feat. Vitest + Vue Test Utils",
+        "title": "【進階ノ章】Vitest UI",
+        "href": "https://ithelp.ithome.com.tw/articles/10309162",
+        "updateTime": "2022-10-17"
+    },
+    {
+        "author": "ShawnL",
+        "topic": "「你知道這是什麼嗎？」小白也能輕鬆瞭解的 Vue3 單元測試！Feat. Vitest + Vue Test Utils",
+        "title": "【進階ノ章】覆蓋率（Coverage）",
+        "href": "https://ithelp.ithome.com.tw/articles/10309187",
+        "updateTime": "2022-10-18"
+    },
+    {
+        "author": "ShawnL",
+        "topic": "「你知道這是什麼嗎？」小白也能輕鬆瞭解的 Vue3 單元測試！Feat. Vitest + Vue Test Utils",
+        "title": "【進階ノ章】寫測試的最佳實踐（Testing Best Practice）",
+        "href": "https://ithelp.ithome.com.tw/articles/10309245",
+        "updateTime": "2022-10-19"
+    },
+    {
+        "author": "ShawnL",
+        "topic": "「你知道這是什麼嗎？」小白也能輕鬆瞭解的 Vue3 單元測試！Feat. Vitest + Vue Test Utils",
+        "title": "【雜談ノ章】那些沒說到的內容、完賽感言、TOC 與參考資料們",
+        "href": "https://ithelp.ithome.com.tw/articles/10309267",
+        "updateTime": "2022-10-20"
+    },
+    {
         "author": "CodingMonkey程序猿",
         "topic": "MySQL，我的超人",
         "title": "Day1-開賽前言-1分鐘讀完資料庫",
@@ -21576,6 +22304,13 @@
     {
         "author": "karta1366796",
         "topic": "Javascripts惡補小教室",
+        "title": "Day14 Javascript ES6",
+        "href": "https://ithelp.ithome.com.tw/articles/10300922",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "karta1366796",
+        "topic": "Javascripts惡補小教室",
         "title": "Day15  Javascript HTML DOM",
         "href": "https://ithelp.ithome.com.tw/articles/10301496",
         "updateTime": "2022-09-30"
@@ -21677,6 +22412,13 @@
         "title": "Day29 Javascript web API",
         "href": "https://ithelp.ithome.com.tw/articles/10308528",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "karta1366796",
+        "topic": "Javascripts惡補小教室",
+        "title": "Day30 Javascript Fetch API",
+        "href": "https://ithelp.ithome.com.tw/articles/10308793",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "Olivia",
@@ -22136,6 +22878,13 @@
     {
         "author": "Yubin",
         "topic": "Fastify 101",
+        "title": "[Fastify] Day07 - FastifyInstance and FastifyServerOptions",
+        "href": "https://ithelp.ithome.com.tw/articles/10296472",
+        "updateTime": "2022-09-22"
+    },
+    {
+        "author": "Yubin",
+        "topic": "Fastify 101",
         "title": "[Fastify] Day08 - Fastify Server Methods",
         "href": "https://ithelp.ithome.com.tw/articles/10296997",
         "updateTime": "2022-09-23"
@@ -22174,6 +22923,13 @@
         "title": "[Fastify] Day13 - Decorator",
         "href": "https://ithelp.ithome.com.tw/articles/10299976",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "Yubin",
+        "topic": "Fastify 101",
+        "title": "[Fastify] Day14 - Plugin",
+        "href": "https://ithelp.ithome.com.tw/articles/10300953",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "Yubin",
@@ -22701,6 +23457,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "時雨",
+        "topic": "用React讓網頁動起來: React基礎與實作",
+        "title": "[Day30]用 React 讓網站動起來：完賽結語",
+        "href": "https://ithelp.ithome.com.tw/articles/10308943",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "ning_chang",
         "topic": "從0開始刻 淺談 Rails 的運作魔法",
         "title": "Day 01 什麼是 MVC 架構？",
@@ -22897,6 +23660,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "ning_chang",
+        "topic": "從0開始刻 淺談 Rails 的運作魔法",
+        "title": "Day 30 - 番外 - Rails 7 其他更新",
+        "href": "https://ithelp.ithome.com.tw/articles/10308936",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "chacoteeth",
         "topic": "[POSTMAN] 該知道的都知道，不知道的慢慢了解 - 與波斯麵三十天的感情培養",
         "title": "Postman Challenge Day 0 - 事前準備 (Pre-requisites)",
@@ -22949,6 +23719,13 @@
         "author": "chacoteeth",
         "topic": "[POSTMAN] 該知道的都知道，不知道的慢慢了解 - 與波斯麵三十天的感情培養",
         "title": "Postman challenge Day 7 - Debugging (除錯)",
+        "href": "https://ithelp.ithome.com.tw/articles/10296587",
+        "updateTime": "2022-09-23"
+    },
+    {
+        "author": "chacoteeth",
+        "topic": "[POSTMAN] 該知道的都知道，不知道的慢慢了解 - 與波斯麵三十天的感情培養",
+        "title": "Postman challenge Day 7 - 除錯 (Debugging )",
         "href": "https://ithelp.ithome.com.tw/articles/10296587",
         "updateTime": "2022-09-23"
     },
@@ -23067,6 +23844,13 @@
     {
         "author": "chacoteeth",
         "topic": "[POSTMAN] 該知道的都知道，不知道的慢慢了解 - 與波斯麵三十天的感情培養",
+        "title": "Postman challenge Day 24 - 進階腳本使用函式庫 (Using libraries)",
+        "href": "https://ithelp.ithome.com.tw/articles/10306549",
+        "updateTime": "2022-10-10"
+    },
+    {
+        "author": "chacoteeth",
+        "topic": "[POSTMAN] 該知道的都知道，不知道的慢慢了解 - 與波斯麵三十天的感情培養",
         "title": "Postman challenge Day 25 - 動態的請求內容主體 (Dynamic request bodies)",
         "href": "https://ithelp.ithome.com.tw/articles/10307088",
         "updateTime": "2022-10-11"
@@ -23091,6 +23875,27 @@
         "title": "Postman challenge Day 28 -  UI testing",
         "href": "https://ithelp.ithome.com.tw/articles/10308438",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "chacoteeth",
+        "topic": "[POSTMAN] 該知道的都知道，不知道的慢慢了解 - 與波斯麵三十天的感情培養",
+        "title": "Postman challenge Day 29 - Webhooks",
+        "href": "https://ithelp.ithome.com.tw/articles/10308693",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "chacoteeth",
+        "topic": "[POSTMAN] 該知道的都知道，不知道的慢慢了解 - 與波斯麵三十天的感情培養",
+        "title": "Postman challenge Day 30 - Submit a pull request",
+        "href": "https://ithelp.ithome.com.tw/articles/10308990",
+        "updateTime": "2022-10-16"
+    },
+    {
+        "author": "chacoteeth",
+        "topic": "[POSTMAN] 該知道的都知道，不知道的慢慢了解 - 與波斯麵三十天的感情培養",
+        "title": "完賽啦!!!!!",
+        "href": "https://ithelp.ithome.com.tw/articles/10309044",
+        "updateTime": "2022-10-16"
     },
     {
         "author": "Hinata",
@@ -23182,6 +23987,13 @@
         "title": "[Vue] Day13 methods及computed 的資料整合與邏輯運算",
         "href": "https://ithelp.ithome.com.tw/articles/10300249",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "Hinata",
+        "topic": "不用去柬埔寨也能活摘 Vue",
+        "title": "[Vue] Day14 資料綁定：v-bind、v-model",
+        "href": "https://ithelp.ithome.com.tw/articles/10300889",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "Hinata",
@@ -23641,6 +24453,13 @@
     {
         "author": "HLTVProxy",
         "topic": "從 Open Source 專案學習 React 開發 － 以 lodestar-app 為例",
+        "title": "Blog (1)",
+        "href": "https://ithelp.ithome.com.tw/articles/10305051",
+        "updateTime": "2022-10-06"
+    },
+    {
+        "author": "HLTVProxy",
+        "topic": "從 Open Source 專案學習 React 開發 － 以 lodestar-app 為例",
         "title": "Blog (2)",
         "href": "https://ithelp.ithome.com.tw/articles/10305669",
         "updateTime": "2022-10-07"
@@ -23693,6 +24512,13 @@
         "title": "chechout (4)",
         "href": "https://ithelp.ithome.com.tw/articles/10308337",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "HLTVProxy",
+        "topic": "從 Open Source 專案學習 React 開發 － 以 lodestar-app 為例",
+        "title": "Review (2) & Endding",
+        "href": "https://ithelp.ithome.com.tw/articles/10308974",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "NoZ",
@@ -23891,6 +24717,13 @@
         "updateTime": "2022-10-14"
     },
     {
+        "author": "NoZ",
+        "topic": "PixiJS青銅玩家",
+        "title": "【LV. 30】PixiJS青銅玩家 新任務？[Y / N]",
+        "href": "https://ithelp.ithome.com.tw/articles/10308961",
+        "updateTime": "2022-10-15"
+    },
+    {
         "author": "Yotsuba",
         "topic": "mitmproxy 在網路爬蟲上的各種應用",
         "title": "Day 1 前言",
@@ -24008,6 +24841,13 @@
         "title": "Day 18 你知道 Twitter 影片也是 M3U8 協定嗎 ? Twitter 影片下載器實作",
         "href": "https://ithelp.ithome.com.tw/articles/10303316",
         "updateTime": "2022-10-03"
+    },
+    {
+        "author": "Terry L.",
+        "topic": "重造會 Slide 的輪子！深入 JavaScript、CSS 模組化設計",
+        "title": "Day 1 - 前言與內容大綱",
+        "href": "https://ithelp.ithome.com.tw/articles/10287078",
+        "updateTime": "2022-09-01"
     },
     {
         "author": "Terry L.",
@@ -24362,6 +25202,13 @@
     {
         "author": "dylan_kacaw",
         "topic": "Ruby新手村的礦工日記",
+        "title": "[ Day 23 ] Rails 中的 Model 基本與 CRUD (上)",
+        "href": "https://ithelp.ithome.com.tw/articles/10305879",
+        "updateTime": "2022-10-08"
+    },
+    {
+        "author": "dylan_kacaw",
+        "topic": "Ruby新手村的礦工日記",
         "title": "[ Day 24 ] Rails 中的 Model 基本與 CRUD  (下)",
         "href": "https://ithelp.ithome.com.tw/articles/10306413",
         "updateTime": "2022-10-09"
@@ -24603,6 +25450,13 @@
         "title": "<DAY 29> modal (二)",
         "href": "https://ithelp.ithome.com.tw/articles/10308654",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "Fish_opera",
+        "topic": "不斷片(篇)挑戰",
+        "title": "<DAY 30> 完賽談",
+        "href": "https://ithelp.ithome.com.tw/articles/10308904",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "maline77",
@@ -24957,6 +25811,13 @@
     {
         "author": "Yingge170",
         "topic": "Three.js 反閘之路",
+        "title": "Day20. 夾娃娃機 - 建立物件剛體",
+        "href": "https://ithelp.ithome.com.tw/articles/10294743",
+        "updateTime": "2022-09-24"
+    },
+    {
+        "author": "Yingge170",
+        "topic": "Three.js 反閘之路",
         "title": "Day21. 建立夾爪剛體",
         "href": "https://ithelp.ithome.com.tw/articles/10294748",
         "updateTime": "2022-09-25"
@@ -24964,7 +25825,21 @@
     {
         "author": "Yingge170",
         "topic": "Three.js 反閘之路",
+        "title": "Day21. 夾娃娃機 - 建立夾爪剛體",
+        "href": "https://ithelp.ithome.com.tw/articles/10294748",
+        "updateTime": "2022-09-25"
+    },
+    {
+        "author": "Yingge170",
+        "topic": "Three.js 反閘之路",
         "title": "Day22. 物件夾取動畫",
+        "href": "https://ithelp.ithome.com.tw/articles/10296769",
+        "updateTime": "2022-09-26"
+    },
+    {
+        "author": "Yingge170",
+        "topic": "Three.js 反閘之路",
+        "title": "Day22. 夾娃娃機 - 物件夾取動畫",
         "href": "https://ithelp.ithome.com.tw/articles/10296769",
         "updateTime": "2022-09-26"
     },
@@ -25545,6 +26420,13 @@
     {
         "author": "東尼先生",
         "topic": "從零開始手刻網站，30 天打造我的前端武器庫",
+        "title": "Day 15：Animation 組件實作",
+        "href": "https://ithelp.ithome.com.tw/articles/10300903",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "東尼先生",
+        "topic": "從零開始手刻網站，30 天打造我的前端武器庫",
         "title": "Day 16：Tooltip 組件實作",
         "href": "https://ithelp.ithome.com.tw/articles/10301795",
         "updateTime": "2022-09-30"
@@ -25951,6 +26833,13 @@
     {
         "author": "阿傑",
         "topic": "咩色用得好，歸剛沒煩惱 - 從 ECMAScript 偷窺 JavaScript Array method",
+        "title": "Day14 咩色用得好 - Array.prototype.some (沒事沒事，有就好了)",
+        "href": "https://ithelp.ithome.com.tw/articles/10300870",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "阿傑",
+        "topic": "咩色用得好，歸剛沒煩惱 - 從 ECMAScript 偷窺 JavaScript Array method",
         "title": "Day15 咩色用得好 - Array.prototype.fill  (將他變成你想要的形狀)",
         "href": "https://ithelp.ithome.com.tw/articles/10301799",
         "updateTime": "2022-09-30"
@@ -26052,6 +26941,13 @@
         "title": "Day 29 咩色用得好 - Array.prototype.sort (part - 2)",
         "href": "https://ithelp.ithome.com.tw/articles/10308587",
         "updateTime": "2022-10-14"
+    },
+    {
+        "author": "阿傑",
+        "topic": "咩色用得好，歸剛沒煩惱 - 從 ECMAScript 偷窺 JavaScript Array method",
+        "title": "Day 30 咩色用得好 - 所以我說...陣列到底是什麼？",
+        "href": "https://ithelp.ithome.com.tw/articles/10308995",
+        "updateTime": "2022-10-15"
     },
     {
         "author": "Wei Ji",
@@ -26288,6 +27184,13 @@
         "author": "ivankao82500",
         "topic": "全能住宅改造王，Django 多租戶架構的應用 —— 實作一個電商網站",
         "title": "Day12 居家上班要懂的 Django 工作流程",
+        "href": "https://ithelp.ithome.com.tw/articles/10297626",
+        "updateTime": "2022-09-24"
+    },
+    {
+        "author": "ivankao82500",
+        "topic": "全能住宅改造王，Django 多租戶架構的應用 —— 實作一個電商網站",
+        "title": "Day 12 居家上班要懂的 Django 工作流程",
         "href": "https://ithelp.ithome.com.tw/articles/10297626",
         "updateTime": "2022-09-24"
     },
@@ -26717,6 +27620,13 @@
         "title": "D14 - 裝飾大廳細節",
         "href": "https://ithelp.ithome.com.tw/articles/10300193",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "鱈魚",
+        "topic": "派對動物嗨起來！",
+        "title": "D15 - 加入派對",
+        "href": "https://ithelp.ithome.com.tw/articles/10300833",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "鱈魚",
@@ -27407,6 +28317,13 @@
     {
         "author": "DannyChen",
         "topic": "從Create到React—用來實作使用者介面的JavaScript函式庫",
+        "title": "React route如何運作、建立404的路由、巢狀路由、動態路由",
+        "href": "https://ithelp.ithome.com.tw/articles/10306082",
+        "updateTime": "2022-10-08"
+    },
+    {
+        "author": "DannyChen",
+        "topic": "從Create到React—用來實作使用者介面的JavaScript函式庫",
         "title": "React route—useNavigate介紹、控制history stack、傳遞參數、重新導向",
         "href": "https://ithelp.ithome.com.tw/articles/10306611",
         "updateTime": "2022-10-09"
@@ -27827,6 +28744,13 @@
     {
         "author": "xuancbb",
         "topic": "vue3 + Leaflet.js",
+        "title": "day29 Extending Leaflet onAdd 和 onRemove",
+        "href": "https://ithelp.ithome.com.tw/articles/10300243",
+        "updateTime": "2022-09-29"
+    },
+    {
+        "author": "xuancbb",
+        "topic": "vue3 + Leaflet.js",
         "title": "day30 結賽感言",
         "href": "https://ithelp.ithome.com.tw/articles/10301722",
         "updateTime": "2022-09-30"
@@ -27935,6 +28859,13 @@
         "title": "Unix的標準-POSIX Basics",
         "href": "https://ithelp.ithome.com.tw/articles/10300352",
         "updateTime": "2022-09-28"
+    },
+    {
+        "author": "tim80411",
+        "topic": "看Roadmap學backend overview",
+        "title": "db大觀園(上)-關聯式資料庫overview",
+        "href": "https://ithelp.ithome.com.tw/articles/10300965",
+        "updateTime": "2022-09-29"
     },
     {
         "author": "tim80411",
@@ -28861,6 +29792,69 @@
         "updateTime": "2022-10-09"
     },
     {
+        "author": "chien0830",
+        "topic": "30天淺嘗主流前端設計",
+        "title": "DAY25 認識Jquery UI2 ~~",
+        "href": "https://ithelp.ithome.com.tw/articles/10308922",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "chien0830",
+        "topic": "30天淺嘗主流前端設計",
+        "title": "DAY24 認識Jquery UI1 ~~",
+        "href": "https://ithelp.ithome.com.tw/articles/10308916",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "chien0830",
+        "topic": "30天淺嘗主流前端設計",
+        "title": "DAY23  Jquery特效使用2~~",
+        "href": "https://ithelp.ithome.com.tw/articles/10308910",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "chien0830",
+        "topic": "30天淺嘗主流前端設計",
+        "title": "DAY22  Jquery特效使用1~~",
+        "href": "https://ithelp.ithome.com.tw/articles/10308901",
+        "updateTime": "2022-10-15"
+    },
+    {
+        "author": "chien0830",
+        "topic": "30天淺嘗主流前端設計",
+        "title": "DAY30 結賽感言!",
+        "href": "https://ithelp.ithome.com.tw/articles/10309165",
+        "updateTime": "2022-10-17"
+    },
+    {
+        "author": "chien0830",
+        "topic": "30天淺嘗主流前端設計",
+        "title": "DAY29 簡單介紹Ajax和JSON!!",
+        "href": "https://ithelp.ithome.com.tw/articles/10309164",
+        "updateTime": "2022-10-17"
+    },
+    {
+        "author": "chien0830",
+        "topic": "30天淺嘗主流前端設計",
+        "title": "DAY28 JQuery UI 元件:Selectmenu!!",
+        "href": "https://ithelp.ithome.com.tw/articles/10309163",
+        "updateTime": "2022-10-17"
+    },
+    {
+        "author": "chien0830",
+        "topic": "30天淺嘗主流前端設計",
+        "title": "DAY27 JQuery UI 元件:Datepicker!!",
+        "href": "https://ithelp.ithome.com.tw/articles/10309160",
+        "updateTime": "2022-10-17"
+    },
+    {
+        "author": "chien0830",
+        "topic": "30天淺嘗主流前端設計",
+        "title": "DAY26 JQuery UI 元件:Dialog!!",
+        "href": "https://ithelp.ithome.com.tw/articles/10309158",
+        "updateTime": "2022-10-17"
+    },
+    {
         "author": "Alice CH",
         "topic": "轉職工程師前的技能學習！沒記起來就偷看筆記吧～",
         "title": "HTML5的語意化標籤，加速搜尋引擎讀懂你的網頁",
@@ -29185,6 +30179,62 @@
     {
         "author": "urlun0404",
         "topic": "Hello TypeScript 菜鳥",
+        "title": "Day 0. 媽 我參賽了",
+        "href": "https://ithelp.ithome.com.tw/articles/10291187",
+        "updateTime": "2022-09-16"
+    },
+    {
+        "author": "urlun0404",
+        "topic": "Hello TypeScript 菜鳥",
+        "title": "Day 1. What is TypeScript?",
+        "href": "https://ithelp.ithome.com.tw/articles/10292075",
+        "updateTime": "2022-09-17"
+    },
+    {
+        "author": "urlun0404",
+        "topic": "Hello TypeScript 菜鳥",
+        "title": "Day 15. TypeScript Class 類別：Member visibility、readonly、abstract",
+        "href": "https://ithelp.ithome.com.tw/articles/10301966",
+        "updateTime": "2022-10-01"
+    },
+    {
+        "author": "urlun0404",
+        "topic": "Hello TypeScript 菜鳥",
+        "title": "Day 17. TypeScript interface 介面：extends、implements",
+        "href": "https://ithelp.ithome.com.tw/articles/10302592",
+        "updateTime": "2022-10-03"
+    },
+    {
+        "author": "urlun0404",
+        "topic": "Hello TypeScript 菜鳥",
+        "title": "Day 19. TypeScript Generic 泛型：Generic Interface、Generic Class",
+        "href": "https://ithelp.ithome.com.tw/articles/10304301",
+        "updateTime": "2022-10-05"
+    },
+    {
+        "author": "urlun0404",
+        "topic": "Hello TypeScript 菜鳥",
+        "title": "Day 20. TypeScript Generic 泛型：Generic Constraints",
+        "href": "https://ithelp.ithome.com.tw/articles/10304425",
+        "updateTime": "2022-10-06"
+    },
+    {
+        "author": "urlun0404",
+        "topic": "Hello TypeScript 菜鳥",
+        "title": "Day 21. TypeScript Type What?：Type Alias",
+        "href": "https://ithelp.ithome.com.tw/articles/10305332",
+        "updateTime": "2022-10-07"
+    },
+    {
+        "author": "urlun0404",
+        "topic": "Hello TypeScript 菜鳥",
+        "title": "Day 22. TypeScript Type What?：Type Assertion",
+        "href": "https://ithelp.ithome.com.tw/articles/10305747",
+        "updateTime": "2022-10-08"
+    },
+    {
+        "author": "urlun0404",
+        "topic": "Hello TypeScript 菜鳥",
         "title": "Day 24. TypeScript Type What?：Narrowing、Type Guides",
         "href": "https://ithelp.ithome.com.tw/articles/10306804",
         "updateTime": "2022-10-10"
@@ -29237,5 +30287,12 @@
         "title": "Day 29. TypeScript Type Manipulation： Mapped Types",
         "href": "https://ithelp.ithome.com.tw/articles/10308791",
         "updateTime": "2022-10-15"
+    },
+    {
+        "author": "urlun0404",
+        "topic": "Hello TypeScript 菜鳥",
+        "title": "Day 30. 完賽結語",
+        "href": "https://ithelp.ithome.com.tw/articles/10309073",
+        "updateTime": "2022-10-16"
     }
 ]

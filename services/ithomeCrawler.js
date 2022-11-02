@@ -15,7 +15,7 @@ dayjs.extend(isBetween);
 async function itHomeCrawler(dateRange = null) {
   const startTime = new Date().getTime();
 
-  const url = 'https://ithelp.ithome.com.tw/2022ironman/web';
+  const url = 'https://ithelp.ithome.com.tw/2022ironman/web?tab=latest';
 
   const content = await puppetGetWebContentWithUserArgs(url);
   const $ = cheerio.load(content);
@@ -35,7 +35,7 @@ async function itHomeCrawler(dateRange = null) {
     const pageStartTime = new Date().getTime();
 
     let perPageContent = await puppetGetWebContentWithUserArgs(
-      `${url}?page=${i + 1}`
+      `${url}&page=${i + 1}`
     );
     let $page = cheerio.load(perPageContent);
     let pageEles = $page('div[class="articles-box"]');
