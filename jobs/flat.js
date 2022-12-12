@@ -12,6 +12,8 @@ async function flatJSON() {
     });
 
     await fs.writeJson(resolve(__dirname, `./dataFlat.json`), content);
+
+    return true;
 }
 
 module.exports = { flatJSON };

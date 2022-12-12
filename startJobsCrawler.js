@@ -5,6 +5,7 @@ const { jobsCrawler } = require('./services/jobsCrawler');
 const fs = require('fs-extra');
 const { resolve } = require('path');
 const { flatJSON } = require('./jobs/flat');
+const { writeToDB } = require('./jobs/writeToDB');
 
 startCron(async () => {
     console.log('啟動排程');
@@ -16,7 +17,7 @@ startCron(async () => {
     )}`;
     lineNotify(msg);
     flatJSON();
-}, '0 30 8,17,21 * * *');
+}, '0 30 8,21 * * *');
 
 // async function run() {
 //     console.log('啟動排程');
@@ -28,6 +29,7 @@ startCron(async () => {
 //     )}`;
 //     lineNotify(msg);
 //     flatJSON();
+//     writeToDB();
 // }
 
 // run();

@@ -21,7 +21,7 @@ const searchItemKey = {
 };
 
 const EnumsMap = {
-    totalPage: 50,
+    totalPage: 100,
     baseUrl: 'https://www.104.com.tw/jobs/search/?',
     filePath: '../jobs/data.json',
 };
@@ -57,7 +57,8 @@ async function jobsCrawler() {
 
             if (jobID) {
                 let data = {
-                    jobID: `${pageEles.eq(j).attr('data-job-no')}`,
+                    _id: jobID,
+                    jobID: jobID,
                     companyID: `${pageEles.eq(j).attr('data-cust-no')}`,
                     company: `${pageEles.eq(j).attr('data-cust-name')}`,
                     job: `${pageEles.eq(j).find('.b-tit').find('a').text()}`,
@@ -75,14 +76,11 @@ async function jobsCrawler() {
         console.log(dataArr);
 
         const file = fs.readFileSync(resolve(__dirname, EnumsMap.filePath), 'utf-8');
-        //   console.log(JSON.parse(file));
         let fileObject = JSON.parse(file || '{}');
-
         dataArr.forEach((data) => {
             let { jobID } = data;
             fileObject[jobID] = data;
         });
-
         await fs.writeJson(resolve(__dirname, EnumsMap.filePath), fileObject);
 
         const pageEndTime = new Date().getTime();
