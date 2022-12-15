@@ -17,6 +17,7 @@ startCron(async () => {
     )}`;
     lineNotify(msg);
     flatJSON();
+    writeToDB();
 }, '0 30 8,21 * * *');
 
 // async function run() {
