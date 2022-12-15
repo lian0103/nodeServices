@@ -30,5 +30,3 @@ async function writeToDB() {
 module.exports = {
     writeToDB,
 };
-
-writeToDB();
