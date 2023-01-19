@@ -78,7 +78,7 @@ async function jobsCrawler() {
                 }
             }
 
-            console.log(dataArr);
+            console.log('筆數:'+dataArr.length);
 
             const file = fs.readFileSync(resolve(__dirname, EnumsMap.filePath), 'utf-8');
             let fileObject = JSON.parse(file || '{}');
