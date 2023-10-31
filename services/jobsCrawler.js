@@ -14,7 +14,7 @@ const searchItemKey = {
     hotJob: '0',
     recommendJob: '0',
     page: 1,
-    keyword: 'javascript',
+    keyword: '資深前端',
     area: '6001002000%2C6001005000%2C6001001000', //台北市 新北市 桃園市
     asc: '0',
     kwop: '7', //今日最新
@@ -35,11 +35,19 @@ const getUrl = (page) => {
 };
 
 async function jobsCrawler() {
+    const filePath = resolve(__dirname, EnumsMap.filePath);
     const startTime = new Date().getTime();
+    let canBreak = false;
+
+    if(!fs.existsSync(filePath)){
+        fs.writeFile(filePath, "{}")
+    }
 
     for (let i = 0; i < EnumsMap.totalPage; i++) {
         const page = i + 1;
         const pageStartTime = new Date().getTime();
+
+        if(canBreak) return "done"
 
         console.log('page', page);
 
@@ -78,15 +86,21 @@ async function jobsCrawler() {
                 }
             }
 
+            if(dataArr.length === 0 || page == 2){
+                canBreak = true;
+                break;
+            }
+
             console.log('筆數:'+dataArr.length);
 
-            const file = fs.readFileSync(resolve(__dirname, EnumsMap.filePath), 'utf-8');
+
+            const file = fs.readFileSync(filePath, 'utf-8');
             let fileObject = JSON.parse(file || '{}');
             dataArr.forEach((data) => {
                 let { jobID } = data;
                 fileObject[jobID] = data;
             });
-            await fs.writeJson(resolve(__dirname, EnumsMap.filePath), fileObject);
+            await fs.writeJson(filePath, fileObject);
 
             const pageEndTime = new Date().getTime();
             console.log(`page${i + 1}花費時間:${Math.floor((pageEndTime - pageStartTime) / 1000)}秒`);
