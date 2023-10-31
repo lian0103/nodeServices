@@ -86,7 +86,7 @@ async function jobsCrawler() {
                 }
             }
 
-            if(dataArr.length === 0 || page == 2){
+            if(dataArr.length === 0){
                 canBreak = true;
                 break;
             }
