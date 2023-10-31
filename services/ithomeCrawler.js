@@ -1,21 +1,22 @@
-const cheerio = require('cheerio');
-const { puppetGetWebContentWithUserArgs } = require('./puppet');
-const fs = require('fs-extra');
-const dayjs = require('dayjs');
-const isBetween = require('dayjs/plugin/isBetween');
-const { resolve } = require('path');
+const cheerio = require("cheerio");
+const { puppetGetWebContentWithUserArgs } = require("./puppet");
+const fs = require("fs-extra");
+const dayjs = require("dayjs");
+const isBetween = require("dayjs/plugin/isBetween");
+const { resolve } = require("path");
 const {
   pureString,
   pureTopicString,
   sortDataByDate,
-} = require('../utils/pureJsonFile');
+} = require("../utils/pureJsonFile");
 
 dayjs.extend(isBetween);
 
+const url = "https://ithelp.ithome.com.tw/2023ironman/contest?tab=latest";
+const articleFilePath = "../ithome2022/articles2023.json";
+
 async function itHomeCrawler(dateRange = null) {
   const startTime = new Date().getTime();
-
-  const url = 'https://ithelp.ithome.com.tw/2022ironman/web?tab=latest';
 
   const content = await puppetGetWebContentWithUserArgs(url);
   const $ = cheerio.load(content);
@@ -45,34 +46,43 @@ async function itHomeCrawler(dateRange = null) {
 
     for (j = 0; j < pageEles.length; j++) {
       let data = {
-        author: `${pureString(pageEles.eq(j).find('.ir-list__name').text())}`,
+        author: `${pureString(pageEles.eq(j).find(".ir-list__name").text())}`,
         topic: `${pureTopicString(
-          pureString(pageEles.eq(j).find('.articles-topic').text())
+          pureString(pageEles.eq(j).find(".articles-topic").text())
         )}`,
-        title: `${pureString(pageEles.eq(j).find('.articles-title').text())}`,
-        href: pageEles.eq(j).find('.articles-title').find('a').attr('href'),
-        updateTime: `${pureString(pageEles.eq(j).find('.date').text())}`,
+        title: `${pureString(pageEles.eq(j).find(".articles-title").text())}`,
+        href: pageEles.eq(j).find(".articles-title").find("a").attr("href"),
+        updateTime: `${pureString(pageEles.eq(j).find(".date").text())}`,
       };
       dataArr.push(data);
 
-
       if (
         Array.isArray(dateRange) &&
-        !dayjs(data.updateTime).isBetween(dateRange[0], dateRange[1], 'day','[')
+        !dayjs(data.updateTime).isBetween(
+          dateRange[0],
+          dateRange[1],
+          "day",
+          "["
+        )
       ) {
-        console.log('in?????????',!dayjs(data.updateTime).isBetween(dateRange[0], dateRange[1], 'day','['))
+        console.log(
+          "in?????????",
+          !dayjs(data.updateTime).isBetween(
+            dateRange[0],
+            dateRange[1],
+            "day",
+            "["
+          )
+        );
         dateRangeBreak = true;
       }
     }
 
-    console.log(dataArr)
+    console.log(dataArr);
 
-    const file = fs.readFileSync(
-      resolve(__dirname, '../ithome2022/articles.json'),
-      'utf-8'
-    );
+    const file = fs.readFileSync(resolve(__dirname, articleFilePath), "utf-8");
     //   console.log(JSON.parse(file));
-    let fileObject = JSON.parse(file||'{}');
+    let fileObject = JSON.parse(file || "{}");
 
     dataArr.forEach((data) => {
       let { author } = data;
@@ -87,10 +97,7 @@ async function itHomeCrawler(dateRange = null) {
       }
     });
 
-    await fs.writeJson(
-      resolve(__dirname, `../ithome2022/articles.json`),
-      fileObject
-    );
+    await fs.writeJson(resolve(__dirname, articleFilePath), fileObject);
 
     crawlerPageCount = i + 1;
     const pageEndTime = new Date().getTime();

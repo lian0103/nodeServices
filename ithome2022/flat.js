@@ -1,9 +1,11 @@
-const fs = require('fs-extra');
-const { resolve } = require('path');
+const fs = require("fs-extra");
+const { resolve } = require("path");
+
+const filePath = "./articles2023.json";
 
 async function flatJSON() {
-  const file = fs.readFileSync(resolve(__dirname, './articles.json'), 'utf-8');
-  const fileObject = JSON.parse(file || '{}');
+  const file = fs.readFileSync(resolve(__dirname, filePath), "utf-8");
+  const fileObject = JSON.parse(file || "{}");
 
   let content = [];
 
