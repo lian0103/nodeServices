@@ -1,7 +1,8 @@
-import * as dotenv from "dotenv";
+const dotenv = require("dotenv")
+const https = require("https")
+const fetch = require("node-fetch-commonjs")
+
 dotenv.config();
-import https from "https";
-import fetch from "node-fetch";
 
 const url = "https://api.openai.com/v1/chat/completions";
 
@@ -10,7 +11,7 @@ const customHeaders = {
   "Content-Type": "application/json",
 };
 
-export const fetchOpenAiChat = async (requestMsg) => {
+ const fetchOpenAiChat = async (requestMsg) => {
   if (!requestMsg) return false;
 
   const requestData = {
@@ -41,6 +42,14 @@ export const fetchOpenAiChat = async (requestMsg) => {
     });
 };
 
+module.exports = {
+  fetchOpenAiChat
+};
+
 // test
-// let res = await fetchOpenAiChat("你是誰?");
-// console.log(res);
+async function runTest(){
+  let res = await fetchOpenAiChat("你是誰?");
+  console.log(res);
+}
+runTest()
+

@@ -1,7 +1,7 @@
 const gtts = require("node-gtts")("zh-TW");
 const player = require("node-wav-player");
 const path = require("path");
-const filepath = path.join(__dirname, "hello.wav");
+const filepath = path.join(__dirname, "../hello.wav");
 
 function playSpeak() {
   player.play({
@@ -9,13 +9,17 @@ function playSpeak() {
   });
 }
 
-export const textToSpeak = (text) => {
+const textToSpeak = (text) => {
   // console.log(gtts);
 
   gtts.save(filepath, text, function () {
     console.log("save done");
     playSpeak();
   });
+};
+
+module.exports = {
+  textToSpeak
 };
 
 // test

@@ -4,3 +4,5 @@ credentials.json
 *.json
 dataFlat.json
 data.json
+pnpm-lock.yaml
+hello.wav
