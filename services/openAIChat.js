@@ -47,9 +47,9 @@ module.exports = {
 };
 
 // test
-async function runTest(){
-  let res = await fetchOpenAiChat("你是誰?");
-  console.log(res);
-}
-runTest()
+// async function runTest(){
+//   let res = await fetchOpenAiChat("你是誰?");
+//   console.log(res);
+// }
+// runTest()
 
